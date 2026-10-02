@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+export DOTNET_CLI_HOME=$PWD
+shift
+dotnet app.dll "$@"
