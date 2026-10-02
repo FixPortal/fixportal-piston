@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+export DOTNET_CLI_HOME=$PWD
+export HOME=$PWD
+
+rename 's/$/\.cs/' "$@" # Add .cs extension
+
+# Same global usings the SDK's ImplicitUsings would generate for a console app.
+cat > GlobalUsings.g.cs <<'EOF'
+global using System;
+global using System.Collections.Generic;
+global using System.IO;
+global using System.Linq;
+global using System.Net.Http;
+global using System.Threading;
+global using System.Threading.Tasks;
+EOF
+
+cat > app.runtimeconfig.json <<'EOF'
+{"runtimeOptions":{"tfm":"net10.0","framework":{"name":"Microsoft.NETCore.App","version":"10.0.0"}}}
+EOF
+
+# Calling Roslyn directly skips MSBuild evaluation, which is most of a
+# project build's wall time for a single file.
+refs=$(ls "$DOTNET_ROOT"/packs/Microsoft.NETCore.App.Ref/*/ref/net10.0/*.dll | sed 's/^/-r:/')
+dotnet "$DOTNET_ROOT"/sdk/*/Roslyn/bincore/csc.dll -nologo -langversion:latest \
+    -nullable:enable -optimize+ -out:app.dll $refs *.cs

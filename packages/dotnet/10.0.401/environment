@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+export DOTNET_ROOT=$PWD
+export PATH=$DOTNET_ROOT:$PATH
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+export DOTNET_NOLOGO=1
+export DOTNET_SKIP_FIRST_TIME_EXPERIENCE=1
+export DOTNET_SKIP_WORKLOAD_INTEGRITY_CHECK=true
+# W^X double-maps JIT memory through a memfd sized far beyond isolate's
+# --fsize limit (10MB); the runtime then reports the failure as
+# "Out of memory" and aborts before Main.
+export DOTNET_EnableWriteXorExecute=0

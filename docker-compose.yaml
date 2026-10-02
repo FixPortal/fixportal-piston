@@ -1,14 +1,11 @@
-version: '3.2'
-
 services:
     api:
-        image: ghcr.io/engineer-man/piston
+        build: .
         container_name: piston_api
         restart: always
+        # isolate needs to create cgroups and namespaces for each submission.
         privileged: true
         ports:
-            - 2000:2000
-        volumes:
-            - ./data/piston/packages:/piston/packages
+            - 127.0.0.1:2000:2000
         tmpfs:
             - /tmp:exec

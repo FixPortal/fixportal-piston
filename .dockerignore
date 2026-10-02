@@ -1,0 +1,9 @@
+# Allow-list: the image needs the API, the install script and the baked-in
+# packages. Everything else (100+ upstream packages, docs, .git) stays out.
+*
+!api/package.json
+!api/package-lock.json
+!api/src
+!scripts/install-package.sh
+!packages/dotnet/10.0.401
+!packages/python/3.13.16
