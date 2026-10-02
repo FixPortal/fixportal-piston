@@ -1,0 +1,46 @@
+{
+  "$comment": [
+    "Tiering for the FixPortal Piston fork. Template and rationale for every shared entry:",
+    "~/.agents/skills/scaffold-ci/assets/review-policy.example.json.",
+    "Repo-specific HIGH: this repo IS a sandbox. The image definition, the isolate",
+    "invocation and limits (api/src/job.js, config.js), the entrypoint that sets up the",
+    "cgroup, and the baked-in runtime packages decide what submitted code can reach.",
+    "scripts/** is HIGH because the gated Smoke test job runs scripts/smoke.py, and",
+    "the image build runs scripts/install-package.sh as root.",
+    "LOW: docs/** is upstream's mkdocs site; nothing here deploys it. Markdown is not",
+    "shipped by the image (.dockerignore is an allow-list)."
+  ],
+
+  "version": 1,
+
+  "high": [
+    ".claude/review-policy.json",
+    ".coderabbit.yaml",
+    ".claude/ci-budget-approval.json",
+    ".github/workflows/ci.yml",
+    ".github/workflows/review-policy-guard.yml",
+    ".github/workflows/review-tier.yml",
+    ".github/scripts/assert_gate_coverage.py",
+    ".github/scripts/assert_workflow_hygiene.py",
+    ".github/scripts/assert_canonical_assets.py",
+    ".github/canonical-assets.json",
+    ".github/dependabot.yml",
+    ".npmrc",
+    "Dockerfile",
+    ".dockerignore",
+    "docker-compose.yaml",
+    "api/src/job.js",
+    "api/src/config.js",
+    "api/src/docker-entrypoint.sh",
+    "packages/dotnet/10.0.401/**",
+    "packages/python/3.13.16/**",
+    "scripts/**"
+  ],
+
+  "low": [
+    "docs/**",
+    "**/*.md",
+    ".gitattributes",
+    ".vscode/**"
+  ]
+}

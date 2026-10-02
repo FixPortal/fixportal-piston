@@ -1,0 +1,80 @@
+name: CI
+
+on:
+  # Deliberately narrow: all-branch pushes fire a second full run on every PR commit.
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# No deploy job: cancel superseded branch runs, never main or tags.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    name: Smoke test
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Lint workflows (actionlint)
+        uses: raven-actions/actionlint@3d39aea434753780c3b3d4a1a31c854b4dbf49d7 # v2
+        with:
+          shellcheck: true
+
+      - name: Build the runner image
+        run: docker build -t fixportal-piston:ci .
+
+      # isolate creates a cgroup and namespaces per submission, hence --privileged.
+      - name: Start the runner
+        run: docker run --privileged -d -p 127.0.0.1:2000:2000 --tmpfs /tmp:exec --name piston fixportal-piston:ci
+
+      - name: Run the smoke checks
+        run: python3 scripts/smoke.py
+
+      - name: Runner logs
+        if: always()
+        run: docker logs piston
+
+  gate-coverage:
+    name: Gate coverage
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Assert every job in this workflow is gated
+        run: python3 .github/scripts/assert_gate_coverage.py .github/workflows/ci.yml
+
+      - name: Assert canonical asset copies match the committed manifest
+        run: python3 .github/scripts/assert_canonical_assets.py
+
+  ci-gate:
+    name: CI Gate
+    if: always()
+    needs: [smoke, gate-coverage]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions: {}
+    steps:
+      - name: Fail if any upstream job did not succeed
+        if: contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')
+        env:
+          RESULTS: ${{ join(needs.*.result, ', ') }}
+        run: |
+          echo "Upstream results: $RESULTS"
+          exit 1
