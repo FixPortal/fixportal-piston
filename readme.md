@@ -1,3 +1,29 @@
+# FixPortal Piston
+
+The sandboxed code runner behind the FixPortal learning portal's interactive editor.
+It is derived from [engineer-man/piston](https://github.com/engineer-man/piston), whose
+README follows unchanged below, and differs from upstream in these ways:
+
+- **Two runtimes, baked in:** `csharp` (.NET 10.0.401) and `python` (3.13.16), installed
+  at image build time. No package index, no `ppman`.
+- **One image:** the root `Dockerfile` (Debian bookworm, Node 22). Upstream's image and
+  its buster Dockerfile no longer pull or build.
+- **Checked in CI:** `scripts/smoke.py` asserts both runtimes work and the sandbox holds.
+
+```bash
+docker compose up -d --build
+```
+
+```bash
+python3 scripts/smoke.py
+```
+
+The container runs privileged so isolate can create cgroups. Expose it only to a trusted
+caller on an internal network. See [SECURITY.md](SECURITY.md), [AGENTS.md](AGENTS.md) and
+[THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
+
+---
+
 <h1 align="center">
     <a href="https://github.com/engineer-man/piston">
         <img src="var/docs/images/piston.svg" valign="middle" width="58" height="58" alt="engineer-man piston" />

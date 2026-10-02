@@ -1,0 +1,38 @@
+reviews:
+  profile: assertive
+  poem: false
+  high_level_summary: true
+  review_status: true
+  collapse_walkthrough: true
+  request_changes_workflow: true
+
+  auto_review:
+    # LABEL-TRIGGERED, not automatic: with `enabled: false` a positive label match still
+    # triggers a review, so the labels are the TRIGGER. review-tier.yml applies
+    # `review-high`; `review-high-manual` is a durable manual override. `enabled: false`
+    # without `labels` would leave both inert and HIGH PRs unreviewed.
+    enabled: false
+    labels: ["review-high", "review-high-manual"]
+    drafts: false
+    # A labelled PR re-reviews on every push, and each one spends from the same pool.
+    auto_pause_after_reviewed_commits: 2
+    # Dependency PRs are out of AI code review on both vendors; CI gates them.
+    ignore_usernames:
+      - "dependabot[bot]"
+      - "renovate[bot]"
+
+  path_filters:
+    - "!**/node_modules/**"
+    - "!**/package-lock.json"
+
+  path_instructions:
+    - path: "**"
+      instructions: |
+        Review as a senior engineer. Prioritise correctness, security, maintainability,
+        and accidental complexity. Do not nitpick style unless it affects readability.
+
+        This repository is a SANDBOXED CODE RUNNER: it executes untrusted submitted
+        code under isolate. Treat any change to isolate arguments, resource limits,
+        mounted directories, networking, the container's privileges, environment
+        variables passed into the box, or the baked-in runtime packages as
+        security-relevant, and say what a hostile submission could newly reach.

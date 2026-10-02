@@ -2,3 +2,9 @@ data/
 .piston_env
 node_modules
 .vscode/
+
+.claude/*
+!.claude/review-policy.json
+!.claude/ci-budget-approval.json
+.semgrep/
+__pycache__/
