@@ -6,7 +6,7 @@
     "dependencies": {
         "body-parser": "^2.3.0",
         "chownr": "^3.0.0",
-        "express": "^4.22.3",
+        "express": "^5.2.1",
         "express-ws": "^5.0.2",
         "is-docker": "^2.1.1",
         "logplease": "^1.2.15",
