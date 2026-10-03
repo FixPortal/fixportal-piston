@@ -8,7 +8,7 @@ RUN apt-get update && \
     make -j$(nproc) install && \
     rm -rf /tmp/*
 
-FROM node:22-bookworm-slim
+FROM node:26-bookworm-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
 
