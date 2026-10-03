@@ -1,5 +1,6 @@
 // Globals are things the user shouldn't change in config, but is good to not use inline constants for
-const is_docker = require('is-docker');
+// is-docker >=3 is ESM-only; require(esm) returns the namespace, so take .default
+const is_docker = require('is-docker').default;
 const fs = require('fs');
 const platform = `${is_docker() ? 'docker' : 'baremetal'}-${fs
     .read_file_sync('/etc/os-release')
