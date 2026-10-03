@@ -70,15 +70,20 @@ CHECKS = [
         lambda r: r["run"]["status"] == "TO",
     ),
     (
-        "network is unreachable from the sandbox",
+        # Structural, not "a request failed": any error (HTTP, TLS, timeout)
+        # would otherwise pass. The box must have no interface but loopback,
+        # and a connect to a raw IP must fail with ENETUNREACH specifically.
+        "network namespace has only loopback",
         PYTHON,
-        "import urllib.request\n"
+        "import errno, socket\n"
+        "ifaces = [l.split(':')[0].strip() for l in open('/proc/net/dev').readlines()[2:]]\n"
+        "print('ifaces=' + ','.join(sorted(ifaces)))\n"
         "try:\n"
-        "    urllib.request.urlopen('https://example.com', timeout=5)\n"
-        "    print('reached')\n"
-        "except Exception:\n"
-        "    print('blocked')\n",
-        lambda r: r["run"]["stdout"].strip() == "blocked",
+        "    socket.create_connection(('1.1.1.1', 443), timeout=3)\n"
+        "    print('connect=CONNECTED')\n"
+        "except OSError as e:\n"
+        "    print('connect=' + str(errno.errorcode.get(e.errno, e.errno)))\n",
+        lambda r: r["run"]["stdout"].split() == ["ifaces=lo", "connect=ENETUNREACH"],
     ),
     (
         "writes outside the box are denied",
