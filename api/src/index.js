@@ -13,7 +13,9 @@ const runtime = require('./runtime');
 
 const logger = Logger.create('index');
 const app = express();
-expressWs(app);
+// Express 5's Router is a real class, so express-ws's patch of express.Router no
+// longer reaches router instances; patch the prototype that does.
+expressWs(app).applyTo(express.Router.prototype);
 
 (async () => {
     logger.info('Setting loglevel to', config.log_level);
