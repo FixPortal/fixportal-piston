@@ -69,9 +69,12 @@ expressWs(app).applyTo(express.Router.prototype);
     app.use(body_parser.urlencoded({ extended: true }));
     app.use(body_parser.json());
 
+    // Body-parser failures (malformed JSON, oversized bodies). The stack stays in the
+    // server log: sending it exposes internal paths and dependency versions to callers.
     app.use((err, req, res, next) => {
-        return res.status(400).send({
-            stack: err.stack,
+        logger.debug('Rejected request body:', err.stack);
+        return res.status(err.status || 400).send({
+            message: 'Request body could not be parsed as JSON.',
         });
     });
 
