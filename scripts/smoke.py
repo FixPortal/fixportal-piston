@@ -9,6 +9,7 @@ check, printing every result so a red run says which property broke.
 import json
 import sys
 import time
+import urllib.error
 import urllib.request
 
 BASE = sys.argv[1] if len(sys.argv) > 1 else "http://127.0.0.1:2000"
@@ -28,6 +29,22 @@ def execute(runtime, code):
     )
     with urllib.request.urlopen(request, timeout=30) as response:
         return json.load(response)
+
+
+def malformed_json_is_a_bare_400():
+    """A bad request body gets a 400 that names the problem but leaks no stack trace."""
+    request = urllib.request.Request(
+        f"{BASE}/api/v2/execute",
+        data=b"{not json",
+        headers={"Content-Type": "application/json"},
+    )
+    try:
+        urllib.request.urlopen(request, timeout=10)
+        return False, "expected HTTP 400, got 2xx"
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", "replace")
+        ok = e.code == 400 and "stack" not in body and "    at " not in body
+        return ok, f"HTTP {e.code}: {body[:300]}"
 
 
 def wait_for_api(deadline_seconds=60):
@@ -117,7 +134,14 @@ def main():
         if not ok:
             print(json.dumps(result, indent=1))
 
-    print(f"{len(CHECKS) + 1 - failed}/{len(CHECKS) + 1} checks passed")
+    ok, detail = malformed_json_is_a_bare_400()
+    failed += not ok
+    print(f"{'PASS' if ok else 'FAIL'} malformed JSON is a 400 without a stack trace")
+    if not ok:
+        print(detail)
+
+    total = len(CHECKS) + 2
+    print(f"{total - failed}/{total} checks passed")
     sys.exit(1 if failed else 0)
 
 
