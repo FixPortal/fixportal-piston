@@ -15,6 +15,9 @@ not built, shipped or tested; do not fix them up.
   allow-list: a new file the image needs must be added there explicitly.
 - Runtimes are installed at build time by `scripts/install-package.sh`, never through
   `ppman` or upstream's package index.
+- Every runtime download is verified against a digest hardcoded in its `build.sh`,
+  checked against the downloaded bytes when it was set. Bump URL and digest together;
+  never fetch "latest" or an install script at build time.
 - Upstream's registries (`ghcr.io/engineer-man/piston`, its package index) are not
   dependencies. Do not reintroduce them.
 

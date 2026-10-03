@@ -23,6 +23,6 @@ image as a separate executable and is not linked into this repository's code.
 
 The image downloads, at build time:
 
-- the .NET SDK via Microsoft's `dotnet-install.sh` (MIT);
+- the .NET SDK release tarball from Microsoft (MIT);
 - CPython from [astral-sh/python-build-standalone](https://github.com/astral-sh/python-build-standalone)
   (CPython is under the PSF licence; the build tooling is MPL-2.0).
