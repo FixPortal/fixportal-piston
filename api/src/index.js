@@ -73,8 +73,10 @@ expressWs(app).applyTo(express.Router.prototype);
     // server log: sending it exposes internal paths and dependency versions to callers.
     app.use((err, req, res, next) => {
         logger.debug('Rejected request body:', err.stack);
+        // body-parser marks client-safe errors `expose` (their message has no stack), so
+        // a 413 says "too large" rather than claiming a JSON syntax problem.
         return res.status(err.status || 400).send({
-            message: 'Request body could not be parsed as JSON.',
+            message: err.expose ? err.message : 'Invalid request body.',
         });
     });
 

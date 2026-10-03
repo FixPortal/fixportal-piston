@@ -43,7 +43,36 @@ def malformed_json_is_a_bare_400():
         return False, "expected HTTP 400, got 2xx"
     except urllib.error.HTTPError as e:
         body = e.read().decode("utf-8", "replace")
-        ok = e.code == 400 and "stack" not in body and "    at " not in body
+        try:
+            parsed = json.loads(body)
+        except ValueError:
+            return False, f"HTTP {e.code}, not JSON: {body[:300]}"
+        # Exactly one field, a message that names no internal path (stack frames
+        # always carry one). body-parser's own text says "at position N"; that is fine.
+        ok = (
+            e.code == 400
+            and isinstance(parsed, dict)
+            and set(parsed) == {"message"}
+            and isinstance(parsed["message"], str)
+            and parsed["message"]
+            and "/" not in parsed["message"]
+        )
+        return ok, f"HTTP {e.code}: {body[:300]}"
+
+
+def oversized_body_is_a_413_that_says_so():
+    """The status and the message must agree: too large is not a JSON syntax problem."""
+    request = urllib.request.Request(
+        f"{BASE}/api/v2/execute",
+        data=b'{"pad":"' + b"x" * 300_000 + b'"}',
+        headers={"Content-Type": "application/json"},
+    )
+    try:
+        urllib.request.urlopen(request, timeout=10)
+        return False, "expected HTTP 413, got 2xx"
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", "replace")
+        ok = e.code == 413 and "too large" in body and "    at " not in body
         return ok, f"HTTP {e.code}: {body[:300]}"
 
 
@@ -140,7 +169,13 @@ def main():
     if not ok:
         print(detail)
 
-    total = len(CHECKS) + 2
+    ok, detail = oversized_body_is_a_413_that_says_so()
+    failed += not ok
+    print(f"{'PASS' if ok else 'FAIL'} oversized body is a 413 whose message says so")
+    if not ok:
+        print(detail)
+
+    total = len(CHECKS) + 3
     print(f"{total - failed}/{total} checks passed")
     sys.exit(1 if failed else 0)
 
