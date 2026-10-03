@@ -22,6 +22,17 @@ This service executes untrusted code. Its security-relevant surface is the sandb
 - **Baked-in runtimes**: the environment variables and scripts each runtime runs inside
   the box.
 
+### Accepted trade-off: .NET W^X is disabled
+
+The C# runtime sets `DOTNET_EnableWriteXorExecute=0`. With W^X on, .NET double-maps JIT
+memory through a file sized beyond isolate's 10MB `--fsize` limit, and the runtime aborts
+before `Main`. Disabling it lets JIT pages be writable and executable at once, so a
+memory-corruption bug inside a submission's own process is easier to turn into code
+execution *within that process*. It does not widen what the process can reach: isolate's
+limits, its mount set and the empty network namespace remain the containing controls.
+Raising `--fsize` instead would widen every submission's file-write reach, which is the
+worse trade.
+
 An escape from a box, a way to reach the network or another submission's files, or a
 way to exhaust the host past the configured limits is in scope.
 

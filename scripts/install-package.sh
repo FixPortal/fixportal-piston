@@ -15,7 +15,9 @@ if [ -f compile ]; then chmod +x compile; fi
 # Upstream's Makefile stamps build_platform with jq; the API warns at startup
 # when it does not match the image's own platform.
 sed '1s/^{/{"build_platform": "docker-debian",/' metadata.json > pkg-info.json
-env -i bash -c "cd $dest; source environment; env" | grep -vE '^(PWD|OLDPWD|_|SHLVL)=' > .env
+# Already in $dest, and env -i keeps the working directory, so nothing is
+# interpolated into the command string.
+env -i bash -c 'source ./environment; env' | grep -vE '^(PWD|OLDPWD|_|SHLVL)=' > .env
 touch .ppman-installed
 chown -R piston:piston "$dest"
 echo "installed $1 $2"

@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# failglob: an SDK or reference-pack path that matches nothing fails here,
+# rather than reaching csc as a literal glob and surfacing as a confusing
+# compile error in the submitter's output.
+set -euo pipefail
+shopt -s failglob
 
 export DOTNET_CLI_HOME=$PWD
 export HOME=$PWD
