@@ -232,7 +232,9 @@ function bind_inside_path(entry) {
 function overlaps_protected(inside) {
     return (
         inside === '' ||
-        inside.split('/').includes('..') ||
+        // Only canonical paths: '.', '..' and '//' could name a protected
+        // directory without matching its spelling below.
+        inside.split('/').slice(1).some(seg => seg === '' || seg === '.' || seg === '..') ||
         protected_bind_roots.some(
             root => inside === root || inside.startsWith(root + '/') || root.startsWith(inside + '/')
         )
