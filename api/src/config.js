@@ -235,7 +235,9 @@ function overlaps_protected(inside) {
         // Only canonical paths: '.', '..' and '//' could name a protected
         // directory without matching its spelling below.
         inside.split('/').slice(1).some(seg => seg === '' || seg === '.' || seg === '..') ||
-        protected_bind_roots.some(
+        // The package directory lives under the configured data directory, which
+        // is validated before bind_dirs, so the configured value is known here.
+        [...protected_bind_roots, (config.data_directory || '/piston').replace(/\/+$/, '')].some(
             root => inside === root || inside.startsWith(root + '/') || root.startsWith(inside + '/')
         )
     );
