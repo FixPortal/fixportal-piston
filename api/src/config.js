@@ -216,7 +216,33 @@ const bind_dir_pattern = new RegExp(
     '^/[A-Za-z0-9._/-]+(=/[A-Za-z0-9._/-]+)?(:(rw|noexec))?$'
 );
 
+// isolate lets a later --dir rule replace an earlier one with the same inside
+// path, so a bind must never land on (or above) a directory the sandbox already
+// mounts or depends on: it would replace /etc's noexec rule, the package
+// directory, or the box itself.
+const protected_bind_roots = [
+    '/bin', '/box', '/dev', '/etc', '/lib', '/lib64', '/piston', '/proc',
+    '/run', '/sbin', '/sys', '/tmp', '/usr', '/var',
+];
+
+function bind_inside_path(entry) {
+    return entry.split(':')[0].split('=')[0].replace(/\/+$/, '');
+}
+
+function overlaps_protected(inside) {
+    return (
+        inside === '' ||
+        inside.split('/').includes('..') ||
+        protected_bind_roots.some(
+            root => inside === root || inside.startsWith(root + '/') || root.startsWith(inside + '/')
+        )
+    );
+}
+
 function validate_bind_dirs(bind_dirs) {
+    if (typeof bind_dirs !== 'object' || bind_dirs === null || Array.isArray(bind_dirs)) {
+        return 'bind_dirs must be a JSON object mapping a language to its binds';
+    }
     for (const language in bind_dirs) {
         if (typeof language !== 'string' || language.length === 0) {
             return `Invalid bind_dirs language '${language}'`;
@@ -230,6 +256,9 @@ function validate_bind_dirs(bind_dirs) {
         for (const entry of entries) {
             if (typeof entry !== 'string' || !bind_dir_pattern.test(entry)) {
                 return `Invalid bind_dirs entry '${entry}' for '${language}'`;
+            }
+            if (overlaps_protected(bind_inside_path(entry))) {
+                return `bind_dirs entry '${entry}' for '${language}' overlaps a directory the sandbox already mounts`;
             }
         }
     }
