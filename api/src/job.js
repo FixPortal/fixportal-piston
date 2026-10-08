@@ -14,6 +14,7 @@ const job_states = {
 
 const MAX_BOX_ID = 999;
 const ISOLATE_PATH = '/usr/local/bin/isolate';
+const CLEANUP_TIMEOUT_MS = 30000;
 let box_id = 0;
 
 let remaining_job_spaces = config.max_concurrent_jobs;
@@ -422,8 +423,12 @@ class Job {
 
                     try {
                         await new Promise((resolve, reject) => {
-                            cp.exec(
-                                `isolate --cleanup --cg -b${box.id}`,
+                            // Bounded: the slot is released only after this settles,
+                            // so a stalled cleanup must fail rather than hold it.
+                            cp.execFile(
+                                'isolate',
+                                ['--cleanup', '--cg', `-b${box.id}`],
+                                { timeout: CLEANUP_TIMEOUT_MS },
                                 error => {
                                     if (error) {
                                         reject(error);
