@@ -137,6 +137,15 @@ const options = {
             validate_overrides,
         ],
     },
+    bind_dirs: {
+        desc: 'Per-language extra isolate directory binds in JSON format: {"<language>": ["<inside>[=<outside>][:rw|:noexec]", ...]}',
+        default: {},
+        parser: parse_bind_dirs,
+        validators: [
+            x => !!x || 'Failed to parse bind_dirs',
+            validate_bind_dirs,
+        ],
+    },
 };
 
 Object.freeze(options);
@@ -193,6 +202,39 @@ function parse_overrides(overrides_string) {
         }
     }
     return parsed_overrides;
+}
+
+function parse_bind_dirs(bind_dirs_string) {
+    try {
+        return JSON.parse(bind_dirs_string);
+    } catch (e) {
+        return null;
+    }
+}
+
+const bind_dir_pattern = new RegExp(
+    '^/[A-Za-z0-9._/-]+(=/[A-Za-z0-9._/-]+)?(:(rw|noexec))?$'
+);
+
+function validate_bind_dirs(bind_dirs) {
+    for (const language in bind_dirs) {
+        if (typeof language !== 'string' || language.length === 0) {
+            return `Invalid bind_dirs language '${language}'`;
+        }
+
+        const entries = bind_dirs[language];
+        if (!Array.isArray(entries)) {
+            return `bind_dirs for '${language}' must be an array of directory binds`;
+        }
+
+        for (const entry of entries) {
+            if (typeof entry !== 'string' || !bind_dir_pattern.test(entry)) {
+                return `Invalid bind_dirs entry '${entry}' for '${language}'`;
+            }
+        }
+    }
+
+    return true;
 }
 
 function validate_overrides(overrides) {
