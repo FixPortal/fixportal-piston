@@ -37,7 +37,7 @@ mkdir -p ef
 for entry in "${packages[@]}"; do
     read -r id version dll sha512 <<< "$entry"
     lower=$(echo "$id" | tr '[:upper:]' '[:lower:]')
-    curl --fail --silent --show-error --location \
+    curl --fail --silent --show-error --location --max-time 300 \
         "https://api.nuget.org/v3-flatcontainer/$lower/$version/$lower.$version.nupkg" -o pkg.nupkg
     echo "${sha512}  pkg.nupkg" | sha512sum --check --strict
     python3 -c "import sys, zipfile; open(sys.argv[3], 'wb').write(zipfile.ZipFile(sys.argv[1]).read(sys.argv[2]))" \
