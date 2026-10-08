@@ -8,6 +8,7 @@ check, printing every result so a red run says which property broke.
 
 import json
 import os
+import shutil
 import subprocess
 import sys
 import time
@@ -18,7 +19,6 @@ BASE = sys.argv[1] if len(sys.argv) > 1 else "http://127.0.0.1:2000"
 CSHARP = ("csharp", "10.0.401")
 PYTHON = ("python", "3.13.16")
 CONTAINER = os.environ.get("PISTON_CONTAINER", "piston")
-_cleanup_check_skipped = False
 
 
 def execute(runtime, code):
@@ -81,46 +81,35 @@ def oversized_body_is_a_413_that_says_so():
 
 
 def cleanup_finished_before_response(check_name):
-    """After a CHECKS response, no isolate box may remain.
+    """After a CHECKS response, no isolate box may remain. Returns True when it holds.
 
-    Returns (counted, failed). A docker failure is printed once as SKIP and
-    is not counted.
+    Needs docker access to the runner container (PISTON_CONTAINER); main()
+    skips these checks only when no docker CLI is on the path. A stalled or
+    failed inspection is a failure, not a skip.
     """
-    global _cleanup_check_skipped
-    if _cleanup_check_skipped:
-        return 0, 0
-
     try:
         completed = subprocess.run(
-            [
-                "docker",
-                "exec",
-                CONTAINER,
-                "sh",
-                "-c",
-                "ls -A /var/local/lib/isolate",
-            ],
+            ["docker", "exec", CONTAINER, "sh", "-c", "ls -A /var/local/lib/isolate"],
             capture_output=True,
             text=True,
+            timeout=15,
         )
-    except OSError as error:
-        _cleanup_check_skipped = True
-        print(f"SKIP cleanup check: {error}")
-        return 0, 0
+    except subprocess.TimeoutExpired:
+        print(f"FAIL cleanup finished before the response: {check_name} (docker exec timed out)")
+        return False
 
     if completed.returncode != 0:
-        _cleanup_check_skipped = True
         reason = completed.stderr.strip() or f"exit {completed.returncode}"
-        print(f"SKIP cleanup check: {reason}")
-        return 0, 0
+        print(f"FAIL cleanup finished before the response: {check_name} ({reason})")
+        return False
 
     if completed.stdout.strip():
         print(f"FAIL cleanup finished before the response: {check_name}")
         print(completed.stdout.rstrip())
-        return 1, 1
+        return False
 
     print(f"PASS cleanup finished before the response: {check_name}")
-    return 1, 0
+    return True
 
 
 def wait_for_api(deadline_seconds=60):
@@ -197,6 +186,9 @@ def main():
     expected = {("csharp.net", CSHARP[1]), ("python", PYTHON[1])}
     failed = 0
     cleanup_total = 0
+    inspect_cleanup = shutil.which("docker") is not None
+    if not inspect_cleanup:
+        print("SKIP cleanup checks: no docker CLI on the path")
     if not expected <= runtimes:
         print(f"FAIL runtimes: expected {sorted(expected)}, got {sorted(runtimes)}")
         failed += 1
@@ -211,9 +203,9 @@ def main():
         if not ok:
             print(json.dumps(result, indent=1))
 
-        counted, cleanup_failed = cleanup_finished_before_response(name)
-        cleanup_total += counted
-        failed += cleanup_failed
+        if inspect_cleanup:
+            cleanup_total += 1
+            failed += not cleanup_finished_before_response(name)
 
     ok, detail = malformed_json_is_a_bare_400()
     failed += not ok
