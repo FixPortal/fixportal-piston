@@ -184,9 +184,7 @@ router.ws('/connect', async (ws, req) => {
 
                             await job.execute(box, event_bus);
                         } catch (error) {
-                            logger.error(
-                                `Error cleaning up job: ${job.uuid}:\n${error}`
-                            );
+                            logger.error(`Error executing job: ${job.uuid}`);
                             throw error;
                         } finally {
                             await job.cleanup();
@@ -241,27 +239,33 @@ router.post('/execute', async (req, res) => {
     } catch (error) {
         return res.status(400).json(error);
     }
+    let result;
+    let failed = false;
     try {
         const box = await job.prime();
 
-        let result = await job.execute(box);
+        result = await job.execute(box);
         // Backward compatibility when the run stage is not started
         if (result.run === undefined) {
             result.run = result.compile;
         }
-
-        return res.status(200).send(result);
-    } catch (error) {
-        logger.error(`Error executing job: ${job.uuid}:\n${error}`);
-        return res.status(500).send();
-    } finally {
-        try {
-            await job.cleanup(); // This gets executed before the returns in try/catch
-        } catch (error) {
-            logger.error(`Error cleaning up job: ${job.uuid}:\n${error}`);
-            return res.status(500).send(); // On error, this replaces the return in the outer try-catch
-        }
+    } catch {
+        failed = true;
+        logger.error(`execution failed: ${job.uuid}`);
     }
+
+    try {
+        await job.cleanup();
+    } catch (error) {
+        failed = true;
+        logger.error(`cleanup failed: ${job.uuid}: ${error.message}`);
+    }
+
+    if (failed) {
+        return res.status(500).send();
+    }
+
+    return res.status(200).send(result);
 });
 
 router.get('/runtimes', (req, res) => {

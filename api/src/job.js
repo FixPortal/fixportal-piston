@@ -23,6 +23,7 @@ const get_next_box_id = () => ++box_id % MAX_BOX_ID;
 
 class Job {
     #dirty_boxes;
+    #slot_released;
     constructor({
         runtime,
         files,
@@ -58,6 +59,7 @@ class Job {
 
         this.state = job_states.READY;
         this.#dirty_boxes = [];
+        this.#slot_released = false;
     }
 
     async #create_isolate_box() {
@@ -303,7 +305,7 @@ class Job {
             }
         } catch (e) {
             throw new Error(
-                `Error reading metadata file: ${box.metadata_file_path}\nError: ${e.message}\nIsolate run stdout: ${stdout}\nIsolate run stderr: ${stderr}`
+                `Error reading metadata file: ${box.metadata_file_path}\nError: ${e.message}`
             );
         }
 
@@ -413,31 +415,66 @@ class Job {
     async cleanup() {
         this.logger.info(`Cleaning up job`);
 
-        remaining_job_spaces++;
-        if (job_queue.length > 0) {
-            job_queue.shift()();
-        }
-        await Promise.all(
-            this.#dirty_boxes.map(async box => {
-                cp.exec(
-                    `isolate --cleanup --cg -b${box.id}`,
-                    (error, stdout, stderr) => {
-                        if (error) {
-                            this.logger.error(
-                                `Failed to run isolate --cleanup: ${error.message} on box #${box.id}\nstdout: ${stdout}\nstderr: ${stderr}`
+        try {
+            const settlements = await Promise.allSettled(
+                this.#dirty_boxes.map(async box => {
+                    let box_failed = false;
+
+                    try {
+                        await new Promise((resolve, reject) => {
+                            cp.exec(
+                                `isolate --cleanup --cg -b${box.id}`,
+                                error => {
+                                    if (error) {
+                                        reject(error);
+                                        return;
+                                    }
+                                    resolve();
+                                }
                             );
-                        }
+                        });
+                    } catch (error) {
+                        box_failed = true;
+                        this.logger.error(
+                            `Failed to run isolate --cleanup: ${error.message} on box #${box.id}`
+                        );
                     }
-                );
-                try {
-                    await fs.rm(box.metadata_file_path);
-                } catch (e) {
-                    this.logger.error(
-                        `Failed to remove the metadata directory of box #${box.id}. Error: ${e.message}`
-                    );
+
+                    try {
+                        await fs.rm(box.metadata_file_path, { force: true });
+                    } catch (error) {
+                        box_failed = true;
+                        this.logger.error(
+                            `Failed to remove the metadata directory of box #${box.id}. Error: ${error.message}`
+                        );
+                    }
+
+                    if (box_failed) {
+                        throw new Error(String(box.id));
+                    }
+                })
+            );
+
+            const failed_box_ids = [];
+            for (let i = 0; i < settlements.length; i++) {
+                if (settlements[i].status === 'rejected') {
+                    failed_box_ids.push(this.#dirty_boxes[i].id);
                 }
-            })
-        );
+            }
+            if (failed_box_ids.length > 0) {
+                throw new Error(
+                    `Failed to clean up boxes: ${failed_box_ids.join(', ')}`
+                );
+            }
+        } finally {
+            if (!this.#slot_released) {
+                this.#slot_released = true;
+                remaining_job_spaces++;
+                if (job_queue.length > 0) {
+                    job_queue.shift()();
+                }
+            }
+        }
     }
 }
 
