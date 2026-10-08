@@ -6,6 +6,11 @@
             "language": "csharp.net",
             "aliases": ["csharp", "c#", "cs"],
             "limit_overrides": { "max_process_count": 128 }
+        },
+        {
+            "language": "csharp-ef",
+            "aliases": [],
+            "limit_overrides": { "max_process_count": 128 }
         }
     ]
 }

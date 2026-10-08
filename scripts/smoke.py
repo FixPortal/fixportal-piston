@@ -17,7 +17,16 @@ import urllib.request
 
 BASE = sys.argv[1] if len(sys.argv) > 1 else "http://127.0.0.1:2000"
 CSHARP = ("csharp", "10.0.401")
+CSHARP_EF = ("csharp-ef", "10.0.401")
 PYTHON = ("python", "3.13.16")
+# Builds a model only. Host=/nonexistent is never opened.
+EF_PROGRAM = (
+    "using Microsoft.EntityFrameworkCore;\n"
+    "var db = new Ctx(new DbContextOptionsBuilder<Ctx>().UseNpgsql(\"Host=/nonexistent\").Options);\n"
+    "Console.WriteLine(db.Model.GetEntityTypes().Count());\n"
+    "public sealed class Item { public int Id { get; set; } }\n"
+    "public sealed class Ctx(DbContextOptions<Ctx> o) : DbContext(o) { public DbSet<Item> Items => Set<Item>(); }\n"
+)
 CONTAINER = os.environ.get("PISTON_CONTAINER", "piston")
 
 
@@ -140,6 +149,22 @@ CHECKS = [
         lambda r: r["compile"]["code"] != 0 and "CS0103" in r["compile"]["output"],
     ),
     (
+        "C# EF Core compiles and runs",
+        CSHARP_EF,
+        EF_PROGRAM,
+        lambda r: (
+            r["compile"]["code"] == 0
+            and r["run"]["code"] == 0
+            and r["run"]["stdout"].strip() == "1"
+        ),
+    ),
+    (
+        "plain C# cannot reference EF Core",
+        CSHARP,
+        EF_PROGRAM,
+        lambda r: r["compile"]["code"] != 0 and "CS0246" in r["compile"]["output"],
+    ),
+    (
         "Python runs",
         PYTHON,
         "print(sum([1, 2, 3]))\n",
@@ -183,7 +208,12 @@ CHECKS = [
 
 def main():
     runtimes = {(r["language"], r["version"]) for r in wait_for_api()}
-    expected = {("csharp.net", CSHARP[1]), ("python", PYTHON[1])}
+    # /runtimes reports the provides language (csharp.net), not the csharp alias.
+    expected = {
+        ("csharp.net", CSHARP[1]),
+        ("csharp-ef", CSHARP_EF[1]),
+        ("python", PYTHON[1]),
+    }
     failed = 0
     cleanup_total = 0
     inspect_cleanup = shutil.which("docker") is not None

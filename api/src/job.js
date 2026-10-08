@@ -166,6 +166,9 @@ class Job {
                 `PISTON_LANGUAGE=${this.runtime.language}`,
                 `--dir=${this.runtime.pkgdir}`,
                 `--dir=/etc:noexec`,
+                ...(config.bind_dirs[this.runtime.language] ?? []).map(
+                    d => `--dir=${d}`
+                ),
                 `--processes=${this.runtime.max_process_count}`,
                 `--open-files=${this.runtime.max_open_files}`,
                 `--fsize=${Math.floor(this.runtime.max_file_size / 1000)}`,

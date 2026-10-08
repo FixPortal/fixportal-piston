@@ -28,5 +28,14 @@ EOF
 # Calling Roslyn directly skips MSBuild evaluation, which is most of a
 # project build's wall time for a single file.
 refs=$(ls "$DOTNET_ROOT"/packs/Microsoft.NETCore.App.Ref/*/ref/net10.0/*.dll | sed 's/^/-r:/')
+
+# csharp-ef also references EF Core and Npgsql, and copies the assemblies beside
+# app.dll so the host's app-directory probe finds them at run time. Copies, not
+# links: symlinks do not survive the move from the compile box to the run box.
+# The largest assembly is under 3 MB, inside isolate's per-file size limit.
+if [[ "${PISTON_LANGUAGE:-}" == "csharp-ef" ]]; then
+    refs="$refs $(ls "$DOTNET_ROOT"/ef/*.dll | sed 's/^/-r:/')"
+    cp "$DOTNET_ROOT"/ef/*.dll .
+fi
 dotnet "$DOTNET_ROOT"/sdk/*/Roslyn/bincore/csc.dll -nologo -langversion:latest \
     -nullable:enable -optimize+ -out:app.dll $refs *.cs
