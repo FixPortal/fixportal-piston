@@ -37,5 +37,11 @@ if [[ "${PISTON_LANGUAGE:-}" == "csharp-ef" ]]; then
     refs="$refs $(ls "$DOTNET_ROOT"/ef/*.dll | sed 's/^/-r:/')"
     cp "$DOTNET_ROOT"/ef/*.dll .
 fi
+registrations=()
+if [[ "${PISTON_LANGUAGE:-}" == "csharp-tests" ]]; then
+    refs="$refs $(ls "$DOTNET_ROOT"/tests/*.dll | sed 's/^/-r:/')"
+    cp -R "$DOTNET_ROOT/tests/." .
+    registrations=("$DOTNET_ROOT/tests-bootstrap/"*.cs)
+fi
 dotnet "$DOTNET_ROOT"/sdk/*/Roslyn/bincore/csc.dll -nologo -langversion:latest \
-    -nullable:enable -optimize+ -out:app.dll $refs *.cs
+    -nullable:enable -optimize+ -out:app.dll "${registrations[@]}" $refs *.cs

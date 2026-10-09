@@ -44,3 +44,55 @@ for entry in "${packages[@]}"; do
         pkg.nupkg "$dll" "ef/$(basename "$dll")"
     rm pkg.nupkg
 done
+
+# Real xUnit/AwesomeAssertions/NSubstitute closure, restored only at image build.
+# Digests are SHA512 of the downloaded nupkg bytes, not NuGet's contentHash.
+tests_packages=(
+    "awesomeassertions 9.6.0 de3a1e977ee79f7d2b6153f8fc03f6ef26e666c5dbc49c0c151cd270aca5ed527231a5718f305e5fd39d532725473787ab5409cfc69a71f32ad95c84f75026c3"
+    "nsubstitute 6.2.0 c9ce3ca5006b71141d2e547480ee9ae93b0b1cddd997f9f8697ae221902a673cdebc71e89b988bbd32089094b5e9560a1b5889efb06ad10ec5cebe3f19fe72df"
+    "xunit.v3 4.0.1 db45f6d50cce89d77cbbe0348179bc9099b16badb691a42f149edfe280913339d9d2af1d01b5cb4b24ea49da762d9738b90d2d817f32736856fe6c6701f63c49"
+    "castle.core 5.1.1 378a149ebfaa12d00cb35bcaee8806803df7bc75980c9e0c67f36e3e057d6af2abaead24cd8274a9595c7ac74cb9597c9d6913b1125b86e6b156a66f7a1ac2fa"
+    "microsoft.applicationinsights 2.23.0 dd497bfad0c65e54a4f78d2a1644f3d0854d4cd01dd83ba506f8d5d53635e28152c7c13210dd5dd3985780aab146a7620de3ebaead8ef12c6f87088676c2157f"
+    "microsoft.bcl.asyncinterfaces 6.0.0 221a05a0c910f7a87b620d8f3831ed392b4eb95d112bee274d35f27009ad2a26445de9d7cd235fe6fb4a03f2550874bda3be3dddd96edaf9c0852a9c23d7b099"
+    "microsoft.testing.extensions.telemetry 2.4.0 493ddac3032b82f378e6fecb4fd07163746ad369235c270be0e67a756d3a3d9bbc0d1d1f25f1f89cae8f537c95e0f9c688f27ad87d694a6b26f0544ceb4f0c4a"
+    "microsoft.testing.extensions.trxreport.abstractions 2.4.0 dc636209efc00f142d85d7154fa3a906551aa8b75c510b15d765483ef56146ad86862698b962c8eb0c09f8f1fe3382b472bdbb792c3689a9b3a5ce69d969d5c4"
+    "microsoft.testing.platform 2.4.0 36103b3aed647ea427a35868bb8321e4257286f7449f8777b63f040ea8183291b223b372090eda957537f089cd9d87e560b889758d40ae6f8f413f5b571f690e"
+    "microsoft.testing.platform.msbuild 2.4.0 08d93413536bf47f1aa4bdeb69ea1735852b700b3ffe26f323ff6b6fb36a82835d74f475f169fa726fe657937c2687926cbaf32c07ebd6d00e1fd5f00d1820a8"
+    "microsoft.win32.registry 5.0.0 471e66567ce59cc86475aece7815d05261264ce114e0c1688ba2551dd51494901fa72dd7a8f74f8e8f0f3dba74af8595f177552f3c06abb4bfce76692197076e"
+    "system.diagnostics.eventlog 6.0.0 40103d5b7cb2b41c7cafca629c112c5526bb773d11367ca62918d8864fba8dac2b48151f37671bcf50499d8f8b268489ee1cade2fb8947cc06e205a1fac6784c"
+    "system.security.accesscontrol 6.0.1 e1beba70b45f8cc5ae06fdecf365f0bb5b58b9af6d7c79accfef15b5a7c7bbef65e10cf9f299418eb413aac86ffefaa0eab9d91650ce77cc398d390f0597ed42"
+    "xunit.analyzers 2.1.0 07b2897501b4a4c53435cf4c851b72e1b6a080da653ab90ea4f70033795617209dd10dd604070d890c6d86848cd806514cc9d57c7d18b33b39bb28e9b4374c38"
+    "xunit.v3.assert 4.0.1 1a83aac30ef23406a5bbda19756ccd56a348eb18b573ec837b5ab812ba7b4c6ce045b6c93a31d8404c5dc22f11c3f9ef1bd1b2635be37d193a6a96f4196cf705"
+    "xunit.v3.common 4.0.1 880a8bbb813ad4d9f0f0d134b3f1e1720d451834295527f55e0e223b41225a724cd686af72d0b655b466e109e499ce93247c64a77c720357a0faae842d45455e"
+    "xunit.v3.core.mtp-v2 4.0.1 98e0b1cd39d9002ed6c385592f27e503834bfbeb079b5761eeb4363ab0205432cdedd2eea5c630c733ab12da624b02da7a8f3aed07f155b0cabdbd8c303b04a2"
+    "xunit.v3.extensibility.core 4.0.1 52519af4388a9fd8def98bab5314ce6f2dc91efff8e3e2b4576c052ae56a69ae1b1f81b8fad3aeb4c691e8f902185b2be8dfaac3320932567a523655553e524a"
+    "xunit.v3.mtp-v2 4.0.1 ba20c62e9a4a0748519c2369d1e131902f3e9759ccb5bb47146154a38c39943f9452e753daed387f3566b66a8e4adb9b575357f422828bb529ce204f3cb6529e"
+    "xunit.v3.runner.common 4.0.1 6752469c0ab994e666a447cdb83d86cd83d64209e4d4e9225642c75f6d3aad3291f9ac69d67ae091df0087a5f3794860c945a029110b24675043182d9b48e6f3"
+    "xunit.v3.runner.inproc.console 4.0.1 281e334912a140ab2d918c10b271931fd64d4ce96caa2fe0a8ba900b5d05a577e4f252e2a998346050e27abc093e1ef2ae1322af21385b4e9adc3bb033fe9ed6"
+)
+mkdir -p tests-feed
+for entry in "${tests_packages[@]}"; do
+    read -r id version sha512 <<< "$entry"
+    curl --fail --silent --show-error --location --max-time 300 \
+        "https://api.nuget.org/v3-flatcontainer/${id}/${version}/${id}.${version}.nupkg" \
+        -o "tests-feed/${id}.${version}.nupkg"
+    echo "${sha512}  tests-feed/${id}.${version}.nupkg" | sha512sum --check --strict
+done
+cat > tests-package/NuGet.Config <<EOF
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <clear />
+    <add key="verified" value="${PWD}/tests-feed" />
+  </packageSources>
+</configuration>
+EOF
+./dotnet restore tests-package/TestsPackage.csproj --locked-mode --force \
+    --configfile tests-package/NuGet.Config --packages "$PWD/tests-cache"
+./dotnet publish tests-package/TestsPackage.csproj -c Release -o tests --no-restore
+mkdir -p tests-bootstrap
+# Reproduce the package's assembly registrations in direct-csc submissions.
+cp tests-cache/xunit.v3.core.mtp-v2/4.0.1/_content/DefaultResultWriters.cs tests-bootstrap/
+cp tests-cache/xunit.v3.core.mtp-v2/4.0.1/_content/DefaultRunnerReporters.cs tests-bootstrap/
+rm tests/app tests/app.dll tests/app.pdb
+rm -rf tests-feed tests-cache tests-package/NuGet.Config tests-package/obj tests-package/bin

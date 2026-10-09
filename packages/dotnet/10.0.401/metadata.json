@@ -11,6 +11,16 @@
             "language": "csharp-ef",
             "aliases": [],
             "limit_overrides": { "max_process_count": 128 }
+        },
+        {
+            "language": "csharp-tests",
+            "aliases": [],
+            "limit_overrides": {
+                "max_process_count": 128,
+                "compile_memory_limit": 268435456,
+                "run_memory_limit": 268435456,
+                "output_max_size": 65536
+            }
         }
     ]
 }
