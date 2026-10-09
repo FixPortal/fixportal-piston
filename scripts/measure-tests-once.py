@@ -73,7 +73,8 @@ internal static class Program
             var stderr = ReadBounded(child.StandardError);
             try
             {
-                await child.WaitForExitAsync().WaitAsync(System.TimeSpan.FromSeconds(3));
+                await System.Threading.Tasks.Task.WhenAll(child.WaitForExitAsync(), stdout, stderr)
+                    .WaitAsync(System.TimeSpan.FromSeconds(3));
                 results.Add(new { subject, nonce, pid = child.Id, code = child.ExitCode,
                     stdout = await stdout, stderr = await stderr });
             }
@@ -183,11 +184,38 @@ def schedule(barrier=None):
             "children": rows}
 
 
+def check_inherited_pipe_timeout():
+    parent = PARENT.replace("new[] { 0, 0, 1, 2, 3, 1, 2, 3 }", "new[] { 0 }")
+    child = '''
+internal static class TestRunner
+{
+    public static int Run(string[] args, string nonce)
+    {
+        System.Diagnostics.Process.Start("/bin/sleep", "5");
+        return 0;
+    }
+}
+'''
+    result = smoke.request("POST", "/api/v2/execute", {
+        "language": "csharp-tests", "version": "10.0.401",
+        "files": [{"name": "Program", "content": parent},
+                  {"name": "TestRunner", "content": child}],
+        "run_timeout": 26000, "run_cpu_time": 26000,
+    })
+    assert result["compile"]["code"] == 0, result
+    assert result["run"]["code"] != 0, result
+    assert "TimeoutException" in result["run"]["stderr"], result
+    assert "__M6_CHILDREN__" not in result["run"]["stdout"], result
+    measurement.quiescent()
+    return {"accepted": False, "run": result["run"]}
+
+
 if __name__ == "__main__":
     assert CONTAINER == "piston-m6-runtime-fallback"
     measurement.quiescent()
     evidence = {"fixtureOnly": True, "idle": [], "concurrentSubmitters": [], "error": None}
     try:
+        evidence["inheritedPipeCheck"] = check_inherited_pipe_timeout()
         for _ in range(3):
             evidence["idle"].append(schedule())
             measurement.quiescent()

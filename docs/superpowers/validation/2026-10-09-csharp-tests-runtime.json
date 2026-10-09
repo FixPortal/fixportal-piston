@@ -2,7 +2,7 @@
   "date": "2026-10-09",
   "runnerBase": "1d9f2de9cdc67c1791c983491f6e37c334c9049b",
   "portalBase": "7b18119a4fb73dec141f31ce3bec99cc19b04138",
-  "imageId": "sha256:4005b487191de861dd705080cf9ebfb8d17c90e1819d1e0c371b65f0afa13851",
+  "imageId": "sha256:a7f9428da6cff98e8ad877685f3301950ef3204a31aa36c80c25de518419fae3",
   "imageLayers": [
     "sha256:e58989146fcec76699871403b9897b5c014af1ccd85f5a9300a215e7975525d7",
     "sha256:1524fd183c8363c27116173769dc7e1553fce0d83a54f606d2ce6ca506200eae",
@@ -1327,33 +1327,33 @@
     "fixtureOnly": true,
     "idle": [
       {
-        "elapsedMs": 3922.0,
+        "elapsedMs": 7235.0,
         "compile": {
           "signal": null,
           "stdout": "warning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'AwesomeAssertions' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\nwarning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'xunit.v3.runner.inproc.console' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\n",
           "stderr": "",
           "code": 0,
           "output": "warning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'AwesomeAssertions' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\nwarning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'xunit.v3.runner.inproc.console' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\n",
-          "memory": 81860000,
+          "memory": 80304000,
           "message": null,
           "status": null,
-          "cpu_time": 1162,
-          "wall_time": 795
+          "cpu_time": 2664,
+          "wall_time": 1946
         },
         "run": {
           "signal": null,
           "stderr": "",
           "code": 0,
-          "memory": 41724000,
+          "memory": 40712000,
           "message": null,
           "status": null,
-          "cpu_time": 3681,
-          "wall_time": 3050
+          "cpu_time": 6557,
+          "wall_time": 5237
         },
         "children": [
           {
             "subject": 0,
-            "nonce": "D2CC0FCF6A7FBE2EBCAE4641AB0A5CE2",
+            "nonce": "CA0CEE4319B973C41CCD3C97B5C09F95",
             "pid": 11,
             "code": 0,
             "stderr": "",
@@ -1364,11 +1364,11 @@
               "FreshChildTests.HasFreshStaticsAndDirectory"
             ],
             "failed": [],
-            "reportSha256": "65bd4fef8b38f99c231b0bc5f3977b9516428758c0198687ec26688e20722cda"
+            "reportSha256": "639b5862bec999e169bcf21c3bb81dc91f257a82b355f2c15a31783c97470829"
           },
           {
             "subject": 0,
-            "nonce": "EBC089B447AB617954734F552D0B1602",
+            "nonce": "EEB2810C3FEB0E67CFD21CDA7B15930D",
             "pid": 33,
             "code": 0,
             "stderr": "",
@@ -1379,12 +1379,12 @@
               "FreshChildTests.HasFreshStaticsAndDirectory"
             ],
             "failed": [],
-            "reportSha256": "5a6a837b2c40352e0ea7eb4018dbc9b7d40995e9b14cad0598086e1d4a3c3396"
+            "reportSha256": "4d13ec746fe4a0da65084aa22a380aaa75ab514d987e04a8deff19f807e1f686"
           },
           {
             "subject": 1,
-            "nonce": "6A1BD9A7DB6D89E320B93298EFB4E5BB",
-            "pid": 48,
+            "nonce": "328B002286440C7ED23A3E04CF292FE3",
+            "pid": 49,
             "code": 1,
             "stderr": "",
             "inventory": [
@@ -1396,11 +1396,11 @@
             "failed": [
               "ClampTests.Clamps(value: -1, expected: 0)"
             ],
-            "reportSha256": "47d956c12f45eb0b3412f813ea0239f5fddae8e19d52c35d22ee4b211dbcfa60"
+            "reportSha256": "ae0165e82c85b6061f6d592eb6136399a1d57c3dc659ee3eac235ecaa40c374a"
           },
           {
             "subject": 2,
-            "nonce": "7914124E687DF668A152116FFB3DCAEA",
+            "nonce": "7330A9430B6CC148C95968D4DFDB4622",
             "pid": 64,
             "code": 1,
             "stderr": "",
@@ -1413,11 +1413,11 @@
             "failed": [
               "ClampTests.Clamps(value: 11, expected: 10)"
             ],
-            "reportSha256": "61ef86df224f774da7f390d94eb41a392ecd548324d7e0148bbaaf5bdfbb889e"
+            "reportSha256": "a7791a4997b06fb6d45dea9df09eccd132ea697e98dd03336539c22934d4f3c0"
           },
           {
             "subject": 3,
-            "nonce": "1BBE3C8CA4CE7F98E756FD208DB5B8A9",
+            "nonce": "BB2D786D36D2064B684326D732C376E0",
             "pid": 79,
             "code": 1,
             "stderr": "",
@@ -1430,11 +1430,11 @@
             "failed": [
               "ClampTests.Clamps(value: 5, expected: 5)"
             ],
-            "reportSha256": "d76c6546120da64925ec08e0ace039bbe6ec3e92bdb025e56069761f07d625b8"
+            "reportSha256": "9b528257d0679e75db2d00292e84fc53ee98144a02e891b9740645c03b9b03e6"
           },
           {
             "subject": 1,
-            "nonce": "6CADC8AC78C789FB8134C6521D2A21BA",
+            "nonce": "AFCC0BD94A3007294BBF843BC59F5A0D",
             "pid": 94,
             "code": 1,
             "stderr": "",
@@ -1447,11 +1447,11 @@
             "failed": [
               "ClampTests.Clamps(value: -1, expected: 0)"
             ],
-            "reportSha256": "b81c0f0eebe8bc2e445f85e4e215f6cca98d8084ba1305e6204dfdc08b0ddd89"
+            "reportSha256": "fe1305109b37e904937f7ce68d491af5036bbdf4658303601e09929302e7b808"
           },
           {
             "subject": 2,
-            "nonce": "449D8B9F9C6F7C2C11C28422E18BD6B0",
+            "nonce": "970B7ACD27B52AD8AC3212CB790F7A5F",
             "pid": 109,
             "code": 1,
             "stderr": "",
@@ -1464,11 +1464,11 @@
             "failed": [
               "ClampTests.Clamps(value: 11, expected: 10)"
             ],
-            "reportSha256": "cbf01b6d9211fce536123e6c34527c51e8bc128ba009d8a3d028059d775fcac6"
+            "reportSha256": "60702c39340a2d07239020c3a522b6b88c2823d4b185cacc183a8ac26e9fe1d0"
           },
           {
             "subject": 3,
-            "nonce": "3C5AA0918795238402F19ADA04A5A828",
+            "nonce": "D5A82EBEE4F5CFD9D839BB9258A9EA7B",
             "pid": 124,
             "code": 1,
             "stderr": "",
@@ -1481,38 +1481,38 @@
             "failed": [
               "ClampTests.Clamps(value: 5, expected: 5)"
             ],
-            "reportSha256": "cd03144e1f38bc079e926943fc72bb7c89125c8799c8ceb99be8b859a948ad3e"
+            "reportSha256": "7483010858b9fb1ff172e243d2fdd5272853fab76c55291d16ad094648b362a7"
           }
         ]
       },
       {
-        "elapsedMs": 3797.0,
+        "elapsedMs": 5516.0,
         "compile": {
           "signal": null,
           "stdout": "warning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'AwesomeAssertions' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\nwarning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'xunit.v3.runner.inproc.console' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\n",
           "stderr": "",
           "code": 0,
           "output": "warning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'AwesomeAssertions' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\nwarning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'xunit.v3.runner.inproc.console' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\n",
-          "memory": 82952000,
+          "memory": 82932000,
           "message": null,
           "status": null,
-          "cpu_time": 1134,
-          "wall_time": 765
+          "cpu_time": 1816,
+          "wall_time": 1244
         },
         "run": {
           "signal": null,
           "stderr": "",
           "code": 0,
-          "memory": 41188000,
+          "memory": 40568000,
           "message": null,
           "status": null,
-          "cpu_time": 3608,
-          "wall_time": 2990
+          "cpu_time": 5147,
+          "wall_time": 4224
         },
         "children": [
           {
             "subject": 0,
-            "nonce": "E23CACC1EF528A27DC625581809549A7",
+            "nonce": "38D8937DE0083FE375D9EEDC65EA9D23",
             "pid": 11,
             "code": 0,
             "stderr": "",
@@ -1523,11 +1523,11 @@
               "FreshChildTests.HasFreshStaticsAndDirectory"
             ],
             "failed": [],
-            "reportSha256": "9dfd575c06bfeb464a7ec692a0484ef041ea18a4b51eaa053fec5fc104688c85"
+            "reportSha256": "1e0e1da61badfaf05c70301a40184e26304c8c7a0228e7261598167bed6c0620"
           },
           {
             "subject": 0,
-            "nonce": "B11D7B5024A082244852CF72A58F3160",
+            "nonce": "3EF1AE8B1E89A3FDA0EEE516A577A917",
             "pid": 33,
             "code": 0,
             "stderr": "",
@@ -1538,11 +1538,11 @@
               "FreshChildTests.HasFreshStaticsAndDirectory"
             ],
             "failed": [],
-            "reportSha256": "1945d5b573a358e8d04c27cbcd516f29dfaba9c1fdd164c0e9208ccea43c1c9a"
+            "reportSha256": "0e1060d52aed834a5ac2348d6713fcd674531ccdb42b7677a5bac113a07389bd"
           },
           {
             "subject": 1,
-            "nonce": "F0AC62E65D9C036D74F2D0D1BCDB3ADB",
+            "nonce": "C6A6BFFD13C8465C51A49886AE22D6DE",
             "pid": 48,
             "code": 1,
             "stderr": "",
@@ -1555,11 +1555,11 @@
             "failed": [
               "ClampTests.Clamps(value: -1, expected: 0)"
             ],
-            "reportSha256": "c97eae0cb3363934df00111026dcab1cc0396724ab799ede7578ff3978cc7e91"
+            "reportSha256": "e3b37bfd4d59d9ffe6abf20a74c18317cbf41a91767726c33c15a9c0adf3efca"
           },
           {
             "subject": 2,
-            "nonce": "5CB90F1F023B1B3A6A0AB89F43E0C892",
+            "nonce": "FCE95B9E97F4C2946F57AF93D97E8091",
             "pid": 63,
             "code": 1,
             "stderr": "",
@@ -1572,12 +1572,12 @@
             "failed": [
               "ClampTests.Clamps(value: 11, expected: 10)"
             ],
-            "reportSha256": "0bf5aa7bef4ba7d97c88125cd98320c2a8f484f12deb7ccc59e5c8b473a7fb4f"
+            "reportSha256": "5fe5c15556bf2f4e0da196a621da2240b3c76595b95fe422cef969b5507a73c9"
           },
           {
             "subject": 3,
-            "nonce": "0C1E71340CCA81575ED36FA5B4ADE9F2",
-            "pid": 78,
+            "nonce": "D7C6436574E5A4A04B15F7636B904B46",
+            "pid": 79,
             "code": 1,
             "stderr": "",
             "inventory": [
@@ -1589,12 +1589,12 @@
             "failed": [
               "ClampTests.Clamps(value: 5, expected: 5)"
             ],
-            "reportSha256": "ff57664f7edce424f1aeeff346af11a28fbce1b1832f10d68c8bbe7bf84f7de5"
+            "reportSha256": "ad29408e8f2737d3f417ba0fae806e79e5e579526fd535dd8d412aaf45a351b2"
           },
           {
             "subject": 1,
-            "nonce": "C1C4385F4DEF155FA9F4F3C1B999860F",
-            "pid": 93,
+            "nonce": "FA1672A1B34DFE957CB2ECF920C95390",
+            "pid": 94,
             "code": 1,
             "stderr": "",
             "inventory": [
@@ -1606,12 +1606,12 @@
             "failed": [
               "ClampTests.Clamps(value: -1, expected: 0)"
             ],
-            "reportSha256": "390cf577692470dec8b8fb8bc80fb0fe1b855c28546538694f838b982eba9a9b"
+            "reportSha256": "1bac4e70c550394e14d20265863f59cfa91ff5411895f06ed93c7de74333dea0"
           },
           {
             "subject": 2,
-            "nonce": "DABCB1802DE54FCC368B0C8685034A4B",
-            "pid": 108,
+            "nonce": "EDF5788B2CDC964B7932A14AE4A9474B",
+            "pid": 109,
             "code": 1,
             "stderr": "",
             "inventory": [
@@ -1623,12 +1623,12 @@
             "failed": [
               "ClampTests.Clamps(value: 11, expected: 10)"
             ],
-            "reportSha256": "993f3f9504a170983ef8b7cb90a0595def1b04b6eea8cb984192c1fac2ed4b3f"
+            "reportSha256": "ea62d731102703bf5a545dc1ea8edada92ec83c279916253ae40f49a6f8623f9"
           },
           {
             "subject": 3,
-            "nonce": "AA66B4CAF527D993E8D048FBB8074B48",
-            "pid": 123,
+            "nonce": "4123585481747FAEA1B29565DFB04FA3",
+            "pid": 124,
             "code": 1,
             "stderr": "",
             "inventory": [
@@ -1640,38 +1640,38 @@
             "failed": [
               "ClampTests.Clamps(value: 5, expected: 5)"
             ],
-            "reportSha256": "bb4c084aa43cd83322db23be427d9341c8c827a06f6051115626583cd2e12448"
+            "reportSha256": "5a7d405ec4b3a8f1c0caa61d1ff0f01fceab219f4027136f76f1384beeb99828"
           }
         ]
       },
       {
-        "elapsedMs": 4110.0,
+        "elapsedMs": 5078.0,
         "compile": {
           "signal": null,
           "stdout": "warning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'AwesomeAssertions' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\nwarning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'xunit.v3.runner.inproc.console' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\n",
           "stderr": "",
           "code": 0,
           "output": "warning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'AwesomeAssertions' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\nwarning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'xunit.v3.runner.inproc.console' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\n",
-          "memory": 83764000,
+          "memory": 83116000,
           "message": null,
           "status": null,
-          "cpu_time": 1173,
-          "wall_time": 804
+          "cpu_time": 1549,
+          "wall_time": 1051
         },
         "run": {
           "signal": null,
           "stderr": "",
           "code": 0,
-          "memory": 42148000,
+          "memory": 41000000,
           "message": null,
           "status": null,
-          "cpu_time": 3915,
-          "wall_time": 3254
+          "cpu_time": 4828,
+          "wall_time": 3965
         },
         "children": [
           {
             "subject": 0,
-            "nonce": "DE32F955C64D6CEAE5DFD1C3E9A173CC",
+            "nonce": "14DD01FBB198F51D36CA3F49F4E34912",
             "pid": 11,
             "code": 0,
             "stderr": "",
@@ -1682,11 +1682,11 @@
               "FreshChildTests.HasFreshStaticsAndDirectory"
             ],
             "failed": [],
-            "reportSha256": "81435a50f8488dab9021e56cc595b76301ad5ae6e30a3a05f58f3ad0c8a0b096"
+            "reportSha256": "1fcec2eef7254301a900a03736713920256e993186318ff6afe1865bba002960"
           },
           {
             "subject": 0,
-            "nonce": "57C1E6C1B53E6C2EB496A15E17B4B463",
+            "nonce": "645FF835B7078B6C9F3363275C521C35",
             "pid": 33,
             "code": 0,
             "stderr": "",
@@ -1697,11 +1697,11 @@
               "FreshChildTests.HasFreshStaticsAndDirectory"
             ],
             "failed": [],
-            "reportSha256": "600002462a3e19a8a86040ac407eccdcc6461fe5e9007f2677a5970344396d11"
+            "reportSha256": "1b5f2eb3a9f97f9f342a08cdab312564eec01a201e794584147d164cdf2bc68b"
           },
           {
             "subject": 1,
-            "nonce": "508297C77FA8F5AA28B46CFB17BA87E3",
+            "nonce": "C1FE7955ACA0C5CB6B7FC3FE060FE7EB",
             "pid": 48,
             "code": 1,
             "stderr": "",
@@ -1714,11 +1714,11 @@
             "failed": [
               "ClampTests.Clamps(value: -1, expected: 0)"
             ],
-            "reportSha256": "dbc33343bc3377104111aba000d703a006de80948ff422ff234da87e1d0a74f9"
+            "reportSha256": "592a3e6b978f5d67b9c6db5e40c1d78c33ecd09098b942c188ca110fa49ee7c2"
           },
           {
             "subject": 2,
-            "nonce": "8B9F4A5239CCA8F862FA4CCFE0A9FEE4",
+            "nonce": "57709A29F0CF6676EB31ECFBB58A6A45",
             "pid": 63,
             "code": 1,
             "stderr": "",
@@ -1731,11 +1731,11 @@
             "failed": [
               "ClampTests.Clamps(value: 11, expected: 10)"
             ],
-            "reportSha256": "c4351c676c71e2b36b03a9a99a6ce938c05dee8c3dc71991e77985c46babd877"
+            "reportSha256": "2685e8a7a1c382adecb283dcd55c06799c3cdab2ab28c94009153e64a111dd5c"
           },
           {
             "subject": 3,
-            "nonce": "F41F77C684A778414AB007B17AD699C5",
+            "nonce": "5D0E1D8F3A3B671A8025CFD43D3374CF",
             "pid": 78,
             "code": 1,
             "stderr": "",
@@ -1748,12 +1748,12 @@
             "failed": [
               "ClampTests.Clamps(value: 5, expected: 5)"
             ],
-            "reportSha256": "4fced77c5eecf9f74dd1821afa6f31688e9b31588e84208d3940b12f4db828bf"
+            "reportSha256": "0022cdb6fdc66c5ea3633fabb496ebb5f38e75ba694f49b0df00f78fc4ef216b"
           },
           {
             "subject": 1,
-            "nonce": "7049F4C9F00E2C6506057788B2010865",
-            "pid": 93,
+            "nonce": "C7257CF01A847476DBB4096F9D8A2EE2",
+            "pid": 94,
             "code": 1,
             "stderr": "",
             "inventory": [
@@ -1765,12 +1765,12 @@
             "failed": [
               "ClampTests.Clamps(value: -1, expected: 0)"
             ],
-            "reportSha256": "2569413787af6baa8eed70c0b088ce45209e7d865d0860f814c19535298ddf82"
+            "reportSha256": "7a30c58aeed6135f4a6729d36fe5ac5445ebf06996beffe6f67d15f8bf22386b"
           },
           {
             "subject": 2,
-            "nonce": "E2F7FBD0C802D0612EF2723E2F1ED789",
-            "pid": 108,
+            "nonce": "953BB0AAF9F5351E69FABE2180BD7F13",
+            "pid": 109,
             "code": 1,
             "stderr": "",
             "inventory": [
@@ -1782,12 +1782,12 @@
             "failed": [
               "ClampTests.Clamps(value: 11, expected: 10)"
             ],
-            "reportSha256": "309ce40cf3f340a16281677ea69dcf9704f1895b16d55d5b1731318bc76c0d0f"
+            "reportSha256": "3f0428f2c9789738eaba27cb5f0d87bae2bc9b325b9673ed6ca431147e54dade"
           },
           {
             "subject": 3,
-            "nonce": "5D14719A4BEB55348226F448854E0250",
-            "pid": 123,
+            "nonce": "26BF33113ADD8729343769BA9FE18418",
+            "pid": 124,
             "code": 1,
             "stderr": "",
             "inventory": [
@@ -1799,40 +1799,40 @@
             "failed": [
               "ClampTests.Clamps(value: 5, expected: 5)"
             ],
-            "reportSha256": "35b68c1d3a085063aa9d807a7c2562e9bde273b8c5b01f7b2015899d1f4808ed"
+            "reportSha256": "0b4d38e0e65c38b1a093bdbed9159a7532b2f9edd1f13de84ef564b1b49090c9"
           }
         ]
       }
     ],
     "concurrentSubmitters": [
       {
-        "elapsedMs": 3984.0,
+        "elapsedMs": 6594.0,
         "compile": {
           "signal": null,
           "stdout": "warning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'AwesomeAssertions' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\nwarning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'xunit.v3.runner.inproc.console' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\n",
           "stderr": "",
           "code": 0,
           "output": "warning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'AwesomeAssertions' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\nwarning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'xunit.v3.runner.inproc.console' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\n",
-          "memory": 83932000,
+          "memory": 82576000,
           "message": null,
           "status": null,
-          "cpu_time": 1127,
-          "wall_time": 761
+          "cpu_time": 1536,
+          "wall_time": 1083
         },
         "run": {
           "signal": null,
           "stderr": "",
           "code": 0,
-          "memory": 42756000,
+          "memory": 39852000,
           "message": null,
           "status": null,
-          "cpu_time": 3881,
-          "wall_time": 3195
+          "cpu_time": 6620,
+          "wall_time": 5447
         },
         "children": [
           {
             "subject": 0,
-            "nonce": "14B5533679EAF0761F9D11352F2709AC",
+            "nonce": "46770376C21459AFFC1A2A2C7CC887D6",
             "pid": 11,
             "code": 0,
             "stderr": "",
@@ -1843,11 +1843,11 @@
               "FreshChildTests.HasFreshStaticsAndDirectory"
             ],
             "failed": [],
-            "reportSha256": "330e6f3d5cd8b35dcb58b81cc4104f46eefccb344d3a10dd45bf90349654b2af"
+            "reportSha256": "a77ccc45b1ed88a40a004d35c00f38a4509a02c46cc9741e1a53ab635d522cb5"
           },
           {
             "subject": 0,
-            "nonce": "C4385C957367E4A8508005C85EE8AC30",
+            "nonce": "4073ACB848DFE19001BECF56FA1C01B1",
             "pid": 33,
             "code": 0,
             "stderr": "",
@@ -1858,11 +1858,11 @@
               "FreshChildTests.HasFreshStaticsAndDirectory"
             ],
             "failed": [],
-            "reportSha256": "aa574e0622c19ac949577a7d9146c91d424cb074734adb5ea9dad7df4f0c7876"
+            "reportSha256": "b3944b4cd64ef6ec0e073419250b6efd64b64acb21e9ad1b96a0f126661f618c"
           },
           {
             "subject": 1,
-            "nonce": "36E62B8E3951FE0B96A2B9DA6F1AF4EB",
+            "nonce": "27CDBD437261B53F33A64457C8762C1E",
             "pid": 48,
             "code": 1,
             "stderr": "",
@@ -1875,11 +1875,11 @@
             "failed": [
               "ClampTests.Clamps(value: -1, expected: 0)"
             ],
-            "reportSha256": "342c359632140eb7c29f16466d6011bc691d9c08c5b9bfa05360c9dc3b8158c4"
+            "reportSha256": "ed065cd1ed150a64333c2145457e1ca4bc90f326e0a0b88e02a62c1836dcc170"
           },
           {
             "subject": 2,
-            "nonce": "8E516901071B3C2DBF64965CF998E568",
+            "nonce": "BCA745F58A5D314705237641A5208A3E",
             "pid": 63,
             "code": 1,
             "stderr": "",
@@ -1892,11 +1892,11 @@
             "failed": [
               "ClampTests.Clamps(value: 11, expected: 10)"
             ],
-            "reportSha256": "99a6a62b5a3e47c619baca5b77303625de40016d9bd4aaf5a54d92e2d1b04283"
+            "reportSha256": "73876ac3f8ccc8f74cc27be8db39bd03ec07a41e66149f3583a1f105951dfcc7"
           },
           {
             "subject": 3,
-            "nonce": "40B63E9D8F1E1540C6B00C76015F2FD5",
+            "nonce": "C07369B27FD7C84FA8F91D0D5A97FD95",
             "pid": 78,
             "code": 1,
             "stderr": "",
@@ -1909,11 +1909,11 @@
             "failed": [
               "ClampTests.Clamps(value: 5, expected: 5)"
             ],
-            "reportSha256": "883b9e89f2a73c005911a76d22d79eb42ebf716c381a3ae76b18c6b77cff1aa5"
+            "reportSha256": "207530b1fc9623d97c1c45cbb89fa6b7d8ae00a049fc1436b2b102e820bc90f1"
           },
           {
             "subject": 1,
-            "nonce": "F4700B6B80C836B46FBFDEAD8D1AEF24",
+            "nonce": "2C640B513B8F2133CE975F1A45AD6973",
             "pid": 93,
             "code": 1,
             "stderr": "",
@@ -1926,11 +1926,11 @@
             "failed": [
               "ClampTests.Clamps(value: -1, expected: 0)"
             ],
-            "reportSha256": "bcd8baebd1004dca4e7c58b33bd2236cff6febc17c03d7674b3c9b83befa67e4"
+            "reportSha256": "c3f080ce16be90045ba132bd75cba96c66f5ea66d46cb06d5826ed6798228f52"
           },
           {
             "subject": 2,
-            "nonce": "69239B8ADB40F4BEF7D2EE2E5287E7C4",
+            "nonce": "8E39FC6E89DFF85B9AE44D575BD7E727",
             "pid": 108,
             "code": 1,
             "stderr": "",
@@ -1943,11 +1943,11 @@
             "failed": [
               "ClampTests.Clamps(value: 11, expected: 10)"
             ],
-            "reportSha256": "dd9cbc376d2e2dc7a6f1d518d92f9bdf5c4c6bd8993fbeffddd2e2f1ec63f28b"
+            "reportSha256": "a4ea8bf376f30dd3372dc491ff6523eb804ece026743280ec411ee02680eb65b"
           },
           {
             "subject": 3,
-            "nonce": "902C4241C784571B9C938490D9A3886F",
+            "nonce": "D46B46269220F7CA2031981166092343",
             "pid": 123,
             "code": 1,
             "stderr": "",
@@ -1960,38 +1960,38 @@
             "failed": [
               "ClampTests.Clamps(value: 5, expected: 5)"
             ],
-            "reportSha256": "6c6512db56bd7c66a1fd95cefa6be715b486e8e4a7d6e9756a4a29309baf2e19"
+            "reportSha256": "44d00f820a41a673ddf2cb2c5f1d2cd860d05536e6f220100cbd011dcf8ffa1d"
           }
         ]
       },
       {
-        "elapsedMs": 8438.0,
+        "elapsedMs": 12922.0,
         "compile": {
           "signal": null,
           "stdout": "warning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'AwesomeAssertions' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\nwarning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'xunit.v3.runner.inproc.console' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\n",
           "stderr": "",
           "code": 0,
           "output": "warning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'AwesomeAssertions' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\nwarning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'xunit.v3.runner.inproc.console' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\n",
-          "memory": 81840000,
+          "memory": 79712000,
           "message": null,
           "status": null,
-          "cpu_time": 1170,
-          "wall_time": 839
+          "cpu_time": 1922,
+          "wall_time": 1420
         },
         "run": {
           "signal": null,
           "stderr": "",
           "code": 0,
-          "memory": 40772000,
+          "memory": 40260000,
           "message": null,
           "status": null,
-          "cpu_time": 4386,
-          "wall_time": 3579
+          "cpu_time": 5994,
+          "wall_time": 4867
         },
         "children": [
           {
             "subject": 0,
-            "nonce": "8F4ABA345FBD58DC253A65DD6EE61CD7",
+            "nonce": "1225DAD5A640D560041EA1BFBAEB9AA3",
             "pid": 11,
             "code": 0,
             "stderr": "",
@@ -2002,11 +2002,11 @@
               "FreshChildTests.HasFreshStaticsAndDirectory"
             ],
             "failed": [],
-            "reportSha256": "b2bb3f5ce6f99bd750968677b1b4a6c75bfbaba30d0b8c5fa3ac2ea4510b2b3e"
+            "reportSha256": "259427398dd60ce3a8fa30b6732a0b2c011b1816e116c9a3ac1663dce418f206"
           },
           {
             "subject": 0,
-            "nonce": "5AD6303D69932C0A80455BA369CC7401",
+            "nonce": "BECA6262C1289C56F0225C5733CA15EA",
             "pid": 33,
             "code": 0,
             "stderr": "",
@@ -2017,11 +2017,11 @@
               "FreshChildTests.HasFreshStaticsAndDirectory"
             ],
             "failed": [],
-            "reportSha256": "e7a69654f52b6fc0c0a3a680e66f5d6688787824481941b0e795b8a031bb829c"
+            "reportSha256": "7eafd426d1cf35642d094fd7bea50fb0456dbf43ab99ccf880e0a340741592a7"
           },
           {
             "subject": 1,
-            "nonce": "C38C0D6B812EEBF59A01AD46190F6300",
+            "nonce": "FA8B9E418443FE4205541E079E864871",
             "pid": 48,
             "code": 1,
             "stderr": "",
@@ -2034,11 +2034,11 @@
             "failed": [
               "ClampTests.Clamps(value: -1, expected: 0)"
             ],
-            "reportSha256": "89743f3cb4520b3ba029e42e6e3351a8ae6f1406ac5731ddb5f00edcdf6566ad"
+            "reportSha256": "8a5a1ed965645a875207bd8b0be9865708ed1d3c7315c65a57281c18c3048026"
           },
           {
             "subject": 2,
-            "nonce": "D84D16017AB9771DA36F9CAEBC6530C8",
+            "nonce": "9BCB6A404817C0C252BBAAF6C9F93726",
             "pid": 63,
             "code": 1,
             "stderr": "",
@@ -2051,11 +2051,11 @@
             "failed": [
               "ClampTests.Clamps(value: 11, expected: 10)"
             ],
-            "reportSha256": "12e66c0885baed37822e6ca01bb6ade136ebcaea4d4bdbc76c45eb78b2030298"
+            "reportSha256": "b5e949f51e5b9a0886dc045ca5cac246284bbc0d9eafb3b84bbe4bb53f3bdcd2"
           },
           {
             "subject": 3,
-            "nonce": "5980915F3BAC3CD307C238E9C904E47D",
+            "nonce": "13EAE93866FFA158DA8BEB8D047D3C70",
             "pid": 78,
             "code": 1,
             "stderr": "",
@@ -2068,12 +2068,12 @@
             "failed": [
               "ClampTests.Clamps(value: 5, expected: 5)"
             ],
-            "reportSha256": "1860a2a0c92ec194703924f009f0bd1c2648c0719febedfbec15fd19bec10783"
+            "reportSha256": "e7678fa8f57e1ce9a3b610437f5310de02354b4d444284a8df17c8aec46531d4"
           },
           {
             "subject": 1,
-            "nonce": "DEDE12D2BEC16A975ED93542176FEB70",
-            "pid": 94,
+            "nonce": "18073691DE14AE221AE1838FAC022F11",
+            "pid": 93,
             "code": 1,
             "stderr": "",
             "inventory": [
@@ -2085,12 +2085,12 @@
             "failed": [
               "ClampTests.Clamps(value: -1, expected: 0)"
             ],
-            "reportSha256": "5eddcffe0806e00c5ccddfe2e932592695d7f663fd2c13e028f8141901cfb353"
+            "reportSha256": "235985eb6104fe1895cc6b9fd5362e09c4a07f5bb3b947ed357791da59d6f888"
           },
           {
             "subject": 2,
-            "nonce": "DCB44E16542D7861E599F6AD3151379F",
-            "pid": 109,
+            "nonce": "8BA67BE41A077B5C49AB2D87510D743B",
+            "pid": 108,
             "code": 1,
             "stderr": "",
             "inventory": [
@@ -2102,12 +2102,12 @@
             "failed": [
               "ClampTests.Clamps(value: 11, expected: 10)"
             ],
-            "reportSha256": "0afd2eb95e798f53b1d5e51eb63d69167f1a57b33fbc13aa4aef7f25939db78b"
+            "reportSha256": "a858226bd8bb6228951e471603e7196dd202491e1bc26c3fb6253b6c4a0f92f5"
           },
           {
             "subject": 3,
-            "nonce": "57D63A6B070D8F335D3FC557DB7D62DE",
-            "pid": 124,
+            "nonce": "A13252523CB84EEE12597BAA4CC7B189",
+            "pid": 123,
             "code": 1,
             "stderr": "",
             "inventory": [
@@ -2119,12 +2119,27 @@
             "failed": [
               "ClampTests.Clamps(value: 5, expected: 5)"
             ],
-            "reportSha256": "29f1b19579d4e67df817ee57d50af5767e55fe974448dee84ced15706bd4b715"
+            "reportSha256": "a6a7b488e017ef1a8796df0e50b504441efec057ad7fb31a6a376b0ca67f4bac"
           }
         ]
       }
     ],
-    "error": null
+    "error": null,
+    "inheritedPipeCheck": {
+      "accepted": false,
+      "run": {
+        "signal": null,
+        "stdout": "",
+        "stderr": "Unhandled exception. System.TimeoutException: The operation has timed out.\n   at Program.RunChildren()\n   at Program.RunChildren()\n   at Program.Main(String[] args)\n/piston/packages/dotnet/10.0.401/run: line 5:     3 Aborted                 (core dumped) dotnet app.dll \"$@\"\n",
+        "code": 134,
+        "output": "Unhandled exception. System.TimeoutException: The operation has timed out.\n   at Program.RunChildren()\n   at Program.RunChildren()\n   at Program.Main(String[] args)\n/piston/packages/dotnet/10.0.401/run: line 5:     3 Aborted                 (core dumped) dotnet app.dll \"$@\"\n",
+        "memory": 16688000,
+        "message": "Exited with error status 134",
+        "status": "RE",
+        "cpu_time": 594,
+        "wall_time": 3656
+      }
+    }
   },
   "httpDisconnect": {
     "isolatePid": 3,
