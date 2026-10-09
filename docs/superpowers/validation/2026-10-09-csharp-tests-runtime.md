@@ -19,6 +19,10 @@ filename collisions. The publish project's stub entry point is removed from the
 installed assets. Each submission supplies its trusted `Program.cs`, so the
 portal can own the nonce and result protocol. Forcing the prototype's baked entry
 point failed the new protocol smoke; removing it made that smoke pass.
+The nonce is readable by in-box code from source or assembly bytes. It correlates
+reports; it does not authenticate results against hostile in-box code. Authenticity
+depends on the portal grammar excluding file/reflection access, raw stdout writes
+and process exit, as well as verifying assertion provenance.
 
 The public API is
 `Xunit.Runner.InProc.SystemConsole.ConsoleRunner.Run(string[])`.
@@ -30,7 +34,10 @@ they are not proof of a valid learner suite. Authenticity additionally requires
 the portal's source grammar and per-test provenance checks before execution.
 
 Image ID: `sha256:4005b487191de861dd705080cf9ebfb8d17c90e1819d1e0c371b65f0afa13851`.
-The adjacent JSON records its layers, all 61 installed asset digests (closure
+The measured containers use this image ID. A later cached build exported image ID
+`sha256:a7f9428da6cff98e8ad877685f3301950ef3204a31aa36c80c25de518419fae3`;
+the recorded RootFS layers match the earlier image inspection exactly.
+The adjacent JSON records the measured image, all 61 installed asset digests (closure
 plus registrations), stage timings and parsed child inventories. Raw fallback
 XML is retained locally; the committed evidence records report digests.
 The image's compiler reports C# 14.0 as the default, including `latest` support.
