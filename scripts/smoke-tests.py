@@ -8,6 +8,7 @@ Missing runtime, missing reports, crashes and empty discovery never pass a theor
 import json
 import os
 import secrets
+import shutil
 import subprocess
 import sys
 import urllib.error
@@ -151,6 +152,9 @@ def request(method, path, payload=None):
 
 
 def cleanup(name):
+    if shutil.which("docker") is None:
+        print(f"SKIP cleanup check: {name} (no docker CLI)")
+        return
     completed = subprocess.run(
         ["docker", "exec", CONTAINER, "sh", "-c", "ls -A /var/local/lib/isolate"],
         capture_output=True,

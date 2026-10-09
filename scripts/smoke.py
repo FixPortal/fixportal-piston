@@ -270,7 +270,10 @@ def main():
     if not ok:
         print(detail)
 
-    tests_smoke = subprocess.run([sys.executable, str(Path(__file__).with_name("smoke-tests.py")), BASE])
+    tests_smoke = subprocess.run(
+        [sys.executable, str(Path(__file__).with_name("smoke-tests.py")), BASE],
+        timeout=180,
+    )
     failed += tests_smoke.returncode != 0
 
     total = len(CHECKS) + 4 + cleanup_total
