@@ -6,3 +6,7 @@
 !*/*/run
 !*/*/compile
 !*/*/test.*
+!dotnet/10.0.401/tests-package/
+!dotnet/10.0.401/tests-package/TestsPackage.csproj
+!dotnet/10.0.401/tests-package/TestBootstrap.cs
+!dotnet/10.0.401/tests-package/packages.lock.json

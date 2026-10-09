@@ -1,0 +1,2164 @@
+{
+  "date": "2026-10-09",
+  "runnerBase": "1d9f2de9cdc67c1791c983491f6e37c334c9049b",
+  "portalBase": "7b18119a4fb73dec141f31ce3bec99cc19b04138",
+  "imageId": "sha256:4005b487191de861dd705080cf9ebfb8d17c90e1819d1e0c371b65f0afa13851",
+  "imageLayers": [
+    "sha256:e58989146fcec76699871403b9897b5c014af1ccd85f5a9300a215e7975525d7",
+    "sha256:1524fd183c8363c27116173769dc7e1553fce0d83a54f606d2ce6ca506200eae",
+    "sha256:1bcace760a96f0d9b5e07f3218b7a2b8eded5b9c91ecbad09b9e9b36bc77d5fe",
+    "sha256:d77c61ef48b102d6c77249be889f7a6612e6cb8adacaa6842aae5b6276e624bb",
+    "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+    "sha256:89f25d63de7d6e5c0be5780fcbf693e16b25044eb504698a95860c404cd810d3",
+    "sha256:d3c0a42571c71cae806f35bcc82c2de3b718f2706781816ebfd45b3a6cbd7026",
+    "sha256:7ddc069278977f310e5fea5f8730b132f0b1361d1df0c7e4d741f11e823f1f82",
+    "sha256:833b63a335ed5d0600a9d66ffcb766ab318d8889090ca14d4835d070bd711db1",
+    "sha256:b0a1c557b79ecc9aa25380386f51d3ec52dec40b04f5a5e799dde4c4089c70ca",
+    "sha256:7545fd8d08859471fa7376b4113af3faf211a77fc17eae2f1d13a817c3a08d52",
+    "sha256:550732616222ee8783b6a0c2df29ec640f78b983f9fb15873c41c7b8ba3e7415",
+    "sha256:62e766d2293532cc02d69425462869305b5be166f8617cd78cf9e321e9fb3405",
+    "sha256:5db18eab991d010603fb36581640d595ca6c15f975676dfbb5b16c247f124a9f",
+    "sha256:f8905c7e3822199daaf75daa1e02100066f202cdcfcf4df3d72cf6aa38c77f39",
+    "sha256:63b41a2bd9e0efa0805e712ecb8bde893813e24c669ca7c165099c1f38ab5163",
+    "sha256:c615478a3f508039b6ed053fd501fcbc2c4b257363b230dc243db248b8d0d797",
+    "sha256:5e652ceae581b7968e5d0dec7b90d37ec2a3a393a7c49953fb1e982a9246399b"
+  ],
+  "runtimeAssets": [
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/NSubstitute.dll",
+      "sha256": "a67480457f480fa835ffe8c042b07420e5c78bd3049730d5b10ab834a5832bae"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/xunit.v3.assert.dll",
+      "sha256": "2ed4cbd3fe285091a936eaf67698f2bd060bc432d97f1605ad880725a970396e"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/Castle.Core.dll",
+      "sha256": "9c5762ae27f2afe0913e8ffa494f705ffe9680699aa4fb79c2613344c918ee28"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/ja/Microsoft.Testing.Extensions.MSBuild.resources.dll",
+      "sha256": "5cbea6ef1637b296784346b6c496b0e89faa415f4db86339718de9d60ddd7c96"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/ja/Microsoft.Testing.Platform.resources.dll",
+      "sha256": "8896ab3c060d2b4fc81a22e2889e3a4be0292d603cf8e4c5228998d0905ef5af"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/ja/Microsoft.Testing.Extensions.Telemetry.resources.dll",
+      "sha256": "7ed8522020f7b345dfea321cd224c97765c0488e0dd2b0f507d2b74b19da2dc7"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/xunit.v3.runner.common.dll",
+      "sha256": "65de30123f02a8632610d37ebd01fc7e85dcac6a30092faf77e4e370b56d9085"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/es/Microsoft.Testing.Extensions.MSBuild.resources.dll",
+      "sha256": "0aa2956acb6f39789420c9c1dde9a8584306a39e2573ce4d297851e85618c477"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/es/Microsoft.Testing.Platform.resources.dll",
+      "sha256": "0323d6d55d87ebe8dde647b895c2e977dec048cd8913738383d893f844aadd1e"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/es/Microsoft.Testing.Extensions.Telemetry.resources.dll",
+      "sha256": "9ff1066a7376155e9903b0f55edb39c438cc40681fa8463b48e33bd8feaba6ed"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/app.deps.json",
+      "sha256": "c73b45d90e0bf71f71745c4aeb040c681f643e6c9c8f01851bae6ff9a448e757"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/pl/Microsoft.Testing.Extensions.MSBuild.resources.dll",
+      "sha256": "aa99c0eb74a27945f15ac4f8ffc803aa0e157992a6849a639fc2e15fd8c7bbf0"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/pl/Microsoft.Testing.Platform.resources.dll",
+      "sha256": "35384cb127bb489b7e5573d431f8f236e22fdd7f4b9d1f9e5250cb8c5a11734d"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/pl/Microsoft.Testing.Extensions.Telemetry.resources.dll",
+      "sha256": "fbd3c623d1a74fbd549ddbf821e4412b8ad043e96b6362808738f8a8b2313ff5"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/Microsoft.Bcl.AsyncInterfaces.dll",
+      "sha256": "5705d245072d3eb78400547b32147dbb6e2c8b02ba8bda76729798f5efdeaecb"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/de/Microsoft.Testing.Extensions.MSBuild.resources.dll",
+      "sha256": "5c1f7ed180cb362fe7a6f84ae12a5abf07edf208cf2a1a42b8418ba8b7c61096"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/de/Microsoft.Testing.Platform.resources.dll",
+      "sha256": "a19022061c7932722b7546e385090c35975a30d03032950e29d5e89978197fbd"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/de/Microsoft.Testing.Extensions.Telemetry.resources.dll",
+      "sha256": "4530d04884d24f948248699c4f28cb6c3ed61f4a6e9b1341e35e986597c448d8"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/fr/Microsoft.Testing.Extensions.MSBuild.resources.dll",
+      "sha256": "8abb5b1b2338f6ece80c5e762c75fe3d159922702bd8309b47f72654a9c90ce4"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/fr/Microsoft.Testing.Platform.resources.dll",
+      "sha256": "e943e1adab6f9d55d98572ab1bd3cf07bc4bd4abfd882283f704513ae2090d62"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/fr/Microsoft.Testing.Extensions.Telemetry.resources.dll",
+      "sha256": "f5e96f5dfc1c5b0e3170699fd47cacd147d461e05054cf71f90db06e2f904cc5"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/Microsoft.Testing.Extensions.MSBuild.dll",
+      "sha256": "d2f6d65e5883d5c534540ea7fda74a73945a28b6eb0c8307a47d9ca27b85c512"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/runtimes/win/lib/net6.0/System.Diagnostics.EventLog.dll",
+      "sha256": "644bb3a1afbea6b835422b0987376f04796e38bbbecc08c94023638eebe57f4c"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/runtimes/win/lib/net6.0/System.Diagnostics.EventLog.Messages.dll",
+      "sha256": "6444dfa03609248effd398e8562af484ad0163a6c47cee6d3a287ffdef809ad2"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/ko/Microsoft.Testing.Extensions.MSBuild.resources.dll",
+      "sha256": "c948a6173bdcd7c4ff57df478a6b4d7c70b1d0df287310df0439a7982422de06"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/ko/Microsoft.Testing.Platform.resources.dll",
+      "sha256": "88ccdfd2eb5083e73df436086ccab64449e79d72dc2f4d52dbf6a3e1879893cb"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/ko/Microsoft.Testing.Extensions.Telemetry.resources.dll",
+      "sha256": "61e4af52e4994e11c10cc3eb01cae8df7044136e81f188a7aed61771eaafaba7"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/app.runtimeconfig.json",
+      "sha256": "9950d4583cfc9a106857c0d5b8a75b53e8774852b57b80bc3823a74d44a4d87f"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/xunit.v3.core.dll",
+      "sha256": "b87e6b8a7807c03bc40598acef451fa36491f282f9379867c68e5927b7762ef3"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/Microsoft.Testing.Platform.dll",
+      "sha256": "80b828cafbc7a1e80b42c868139aed3f91dfecfbe0a84d0052f7d53c2c58c6fb"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/pt-BR/Microsoft.Testing.Extensions.MSBuild.resources.dll",
+      "sha256": "ac5634ad166fbc997d259a24771a0175abfea7fbd33fc163051eb86628278542"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/pt-BR/Microsoft.Testing.Platform.resources.dll",
+      "sha256": "2ee0bb2d7fc2d819f5aef68328d69cc0424c7738a1d567d1545e523ec13973cb"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/pt-BR/Microsoft.Testing.Extensions.Telemetry.resources.dll",
+      "sha256": "456bd62893994aa35c93e533bf99ccaf66d760459bb54c69cef4ab748986d571"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/System.Diagnostics.EventLog.dll",
+      "sha256": "24a02d97c2fc6d56735e196bb7faaae8faf0068c486d0c3c7fa3e3b73b4f12a4"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/AwesomeAssertions.dll",
+      "sha256": "b1ae00a2bf78390122b8319a427ccde9f924e8d936ab42f1376b73f05c95abd6"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/xunit.v3.runner.inproc.console.dll",
+      "sha256": "76d1b132bd68d5f3b78cf2a5c96548054d0958810b5eb8e930e36fd85ae15e7e"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/zh-Hans/Microsoft.Testing.Extensions.MSBuild.resources.dll",
+      "sha256": "74111bc1511881e41d7b8cbb19c2f54514b520fb5345df3ec3af48c52ebf0b70"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/zh-Hans/Microsoft.Testing.Platform.resources.dll",
+      "sha256": "ec62d3bf8eea8e184dffc4b3ceba52ab52f5fb6cd5a7759d42af095668c6a097"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/zh-Hans/Microsoft.Testing.Extensions.Telemetry.resources.dll",
+      "sha256": "883f01e689fb57d66d5332d4963948e61314ade26f404e60ccf61f3944589796"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/tr/Microsoft.Testing.Extensions.MSBuild.resources.dll",
+      "sha256": "f0d8a9c9a4c0ba2f682965b21ae1df0dcfca2964f3ad2c4c9837033db4c016e1"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/tr/Microsoft.Testing.Platform.resources.dll",
+      "sha256": "4cc44ea9a11950bbd0c9e0f55f2a16c5d169f05f501ccd9b23c2ad34100edeb9"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/tr/Microsoft.Testing.Extensions.Telemetry.resources.dll",
+      "sha256": "60d989d2a144ba113ae95b1a79b4914a7db388d254e109a9ad949d4353d7e2d2"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/xunit.v3.mtp-v2.dll",
+      "sha256": "b8135b5eec4257c6aea52bc7136832a45b2bfec730b817ed24a30138ff8b51d1"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/Microsoft.ApplicationInsights.dll",
+      "sha256": "bf9a4b88c7f94267e1cc7ed0700c575d3eb3266ff25bcb76e4f40f1b0fba022d"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/xunit.v3.common.dll",
+      "sha256": "59172544bb8113a6f6b43892ac1b9d8928708c90696c1bdb7e451c764626b88a"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/cs/Microsoft.Testing.Extensions.MSBuild.resources.dll",
+      "sha256": "210180d247bce042f75e0a5811c776475765a2dfa041286f6d96dd49a2d9e91e"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/cs/Microsoft.Testing.Platform.resources.dll",
+      "sha256": "0808840f4260514cd94170590c465ab77f5b82d2bb93c56ce57d367b02db16ce"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/cs/Microsoft.Testing.Extensions.Telemetry.resources.dll",
+      "sha256": "52e92807806088de609733c402bbefd5c2d84c936e9240795437b3ed4b9f4df8"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/it/Microsoft.Testing.Extensions.MSBuild.resources.dll",
+      "sha256": "17ab0407beeeb6f0aa52c170c2c9558cb994bbee6f53200ed6f6086044d28371"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/it/Microsoft.Testing.Platform.resources.dll",
+      "sha256": "e46ee6c62b2455315293deabeea1a67052d4a482fb6a79cc08c175f2a9750c43"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/it/Microsoft.Testing.Extensions.Telemetry.resources.dll",
+      "sha256": "05060e9930f9a76e9650d91d256d698d6bd996a9d8c5909294a0cda3cd7b2a66"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/zh-Hant/Microsoft.Testing.Extensions.MSBuild.resources.dll",
+      "sha256": "e393894b87b36223cb4ea3123d2989cb70cc7ad30792b2a0aaa97e310ad226af"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/zh-Hant/Microsoft.Testing.Platform.resources.dll",
+      "sha256": "adfa98adf7a80a1cb0dea5f233dbb667ee067420322d8eda65d09bbefae95e39"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/zh-Hant/Microsoft.Testing.Extensions.Telemetry.resources.dll",
+      "sha256": "adc8de3dcf4e4ae0207b91da884dbed81aa711fd0847f0bc13691d90f44761b1"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/Microsoft.Testing.Extensions.Telemetry.dll",
+      "sha256": "7f27ea7e6eff81e1b8f78878d279302e0ee1368d3db7190c5556bc922352e578"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/Microsoft.Testing.Extensions.TrxReport.Abstractions.dll",
+      "sha256": "4abda24b56302b93f256e857a9a242e75446827dec4509bdf206db7c3a0974f0"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/ru/Microsoft.Testing.Extensions.MSBuild.resources.dll",
+      "sha256": "158d4a312082ec06db4a2a51fbcf9ef6405409d173013bd929c42e998813d42f"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/ru/Microsoft.Testing.Platform.resources.dll",
+      "sha256": "12c00de94665b3b3f7e3d00bcd7d8324bac52462a73596ac540d6831f4010a85"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests/ru/Microsoft.Testing.Extensions.Telemetry.resources.dll",
+      "sha256": "3f2f6ef5012e31b92beb53f60470069cb8cb1977c48112d54472d2325d23d1c2"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests-bootstrap/DefaultResultWriters.cs",
+      "sha256": "206a1dd2d92f05c8c977f2a86bc283fbbf519e69abf17808be1daee9a2642fe3"
+    },
+    {
+      "path": "/piston/packages/dotnet/10.0.401/tests-bootstrap/DefaultRunnerReporters.cs",
+      "sha256": "e110bb9fe21ca6c3120a00382c773a086d62a008a0b0d2b76d08416f27d92bf2"
+    }
+  ],
+  "independentJobs": {
+    "base": "http://127.0.0.1:2082",
+    "container": "piston-m6-runtime-candidate",
+    "idle": [
+      {
+        "elapsedMs": 10782.0,
+        "jobs": [
+          {
+            "subject": 0,
+            "elapsedMs": 1328.0,
+            "nonce": "a36dffc42118e8e94a474b7b0415774e",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1051,
+              "wall_time": 841
+            },
+            "run": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 407,
+              "wall_time": 402
+            }
+          },
+          {
+            "subject": 0,
+            "elapsedMs": 1469.0,
+            "nonce": "ddfaaf1c637f1968eb92f06567a1a3c6",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1102,
+              "wall_time": 887
+            },
+            "run": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 530,
+              "wall_time": 505
+            }
+          },
+          {
+            "subject": 1,
+            "elapsedMs": 1313.0,
+            "nonce": "100519dfa5db5b1f3224ada535f41d95",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: -1, expected: 0)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1035,
+              "wall_time": 823
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 448,
+              "wall_time": 456
+            }
+          },
+          {
+            "subject": 2,
+            "elapsedMs": 1343.0,
+            "nonce": "9beda07af11ada2d6421879ae9cbfcc0",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 11, expected: 10)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1056,
+              "wall_time": 837
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 458,
+              "wall_time": 458
+            }
+          },
+          {
+            "subject": 3,
+            "elapsedMs": 1297.0,
+            "nonce": "5739051a7934c21f64987f20e87ea88d",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 971,
+              "wall_time": 797
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 468,
+              "wall_time": 458
+            }
+          },
+          {
+            "subject": 1,
+            "elapsedMs": 1344.0,
+            "nonce": "2546b139adfd126a93bb5db40678f4b6",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: -1, expected: 0)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1032,
+              "wall_time": 818
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 447,
+              "wall_time": 462
+            }
+          },
+          {
+            "subject": 2,
+            "elapsedMs": 1344.0,
+            "nonce": "4226a7ab16edd01d337029c12f1d3453",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 11, expected: 10)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1078,
+              "wall_time": 847
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 438,
+              "wall_time": 440
+            }
+          },
+          {
+            "subject": 3,
+            "elapsedMs": 1344.0,
+            "nonce": "c0018886c7d45ad0a31f6c9beca80bfa",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1041,
+              "wall_time": 869
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 439,
+              "wall_time": 438
+            }
+          }
+        ]
+      },
+      {
+        "elapsedMs": 10094.0,
+        "jobs": [
+          {
+            "subject": 0,
+            "elapsedMs": 1250.0,
+            "nonce": "06d84722d39813927c5e9effbe5e286e",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1039,
+              "wall_time": 803
+            },
+            "run": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 393,
+              "wall_time": 390
+            }
+          },
+          {
+            "subject": 0,
+            "elapsedMs": 1312.0,
+            "nonce": "c994b01da9bb77d92072b08ad5539fa2",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1036,
+              "wall_time": 830
+            },
+            "run": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 439,
+              "wall_time": 427
+            }
+          },
+          {
+            "subject": 1,
+            "elapsedMs": 1297.0,
+            "nonce": "eb853277d776bcf4f9a2c60c24244499",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: -1, expected: 0)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1054,
+              "wall_time": 844
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 409,
+              "wall_time": 413
+            }
+          },
+          {
+            "subject": 2,
+            "elapsedMs": 1172.0,
+            "nonce": "e117ded4436b28f58fa7fcaf666246ea",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 11, expected: 10)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 909,
+              "wall_time": 720
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 427,
+              "wall_time": 415
+            }
+          },
+          {
+            "subject": 3,
+            "elapsedMs": 1172.0,
+            "nonce": "5f6d6dfaed5a946a73a284646a588c52",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 928,
+              "wall_time": 734
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 405,
+              "wall_time": 391
+            }
+          },
+          {
+            "subject": 1,
+            "elapsedMs": 1266.0,
+            "nonce": "c34eb4491c6cd4a5e0aedc662d747450",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: -1, expected: 0)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 971,
+              "wall_time": 787
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 445,
+              "wall_time": 431
+            }
+          },
+          {
+            "subject": 2,
+            "elapsedMs": 1281.0,
+            "nonce": "af5f19580586e0b944d1b66d1ef39f1d",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 11, expected: 10)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 953,
+              "wall_time": 766
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 466,
+              "wall_time": 463
+            }
+          },
+          {
+            "subject": 3,
+            "elapsedMs": 1329.0,
+            "nonce": "d9152646e2efddc4cf7a17259a6d7648",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1045,
+              "wall_time": 840
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 472,
+              "wall_time": 452
+            }
+          }
+        ]
+      },
+      {
+        "elapsedMs": 10219.0,
+        "jobs": [
+          {
+            "subject": 0,
+            "elapsedMs": 1188.0,
+            "nonce": "aeda6ec4999292535fa2799a7ba2d993",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 973,
+              "wall_time": 749
+            },
+            "run": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 390,
+              "wall_time": 378
+            }
+          },
+          {
+            "subject": 0,
+            "elapsedMs": 1234.0,
+            "nonce": "1332e8e2e2f5d9a3e982a758739042ea",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 954,
+              "wall_time": 757
+            },
+            "run": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 430,
+              "wall_time": 431
+            }
+          },
+          {
+            "subject": 1,
+            "elapsedMs": 1328.0,
+            "nonce": "74f54873f534108533859ed6973348f5",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: -1, expected: 0)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 953,
+              "wall_time": 787
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 490,
+              "wall_time": 482
+            }
+          },
+          {
+            "subject": 2,
+            "elapsedMs": 1282.0,
+            "nonce": "029a2c2ad99749ddfa76a46cb205b2df",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 11, expected: 10)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1006,
+              "wall_time": 809
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 429,
+              "wall_time": 419
+            }
+          },
+          {
+            "subject": 3,
+            "elapsedMs": 1281.0,
+            "nonce": "ee70a1d55b0a7c863d7c191bb2f4ff9a",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1006,
+              "wall_time": 804
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 434,
+              "wall_time": 432
+            }
+          },
+          {
+            "subject": 1,
+            "elapsedMs": 1266.0,
+            "nonce": "e65270e677765f02db6db04ecc7aac34",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: -1, expected: 0)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 999,
+              "wall_time": 793
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 422,
+              "wall_time": 424
+            }
+          },
+          {
+            "subject": 2,
+            "elapsedMs": 1328.0,
+            "nonce": "997b4ecc2967ba47af354e00669a5547",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 11, expected: 10)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 977,
+              "wall_time": 812
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 456,
+              "wall_time": 454
+            }
+          },
+          {
+            "subject": 3,
+            "elapsedMs": 1312.0,
+            "nonce": "17d5317859ce50e76700866f3ca5f4e5",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1061,
+              "wall_time": 805
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 415,
+              "wall_time": 435
+            }
+          }
+        ]
+      }
+    ],
+    "concurrentSubmitters": [
+      {
+        "elapsedMs": 19031.0,
+        "jobs": [
+          {
+            "subject": 0,
+            "elapsedMs": 1203.0,
+            "nonce": "016056e49050ed8efcace609c015ed2b",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1034,
+              "wall_time": 797
+            },
+            "run": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 366,
+              "wall_time": 357
+            }
+          },
+          {
+            "subject": 0,
+            "elapsedMs": 2437.0,
+            "nonce": "3db7734588157bd1ff79a9d44b47edbb",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1054,
+              "wall_time": 810
+            },
+            "run": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 394,
+              "wall_time": 400
+            }
+          },
+          {
+            "subject": 1,
+            "elapsedMs": 2547.0,
+            "nonce": "0aa4433f353df4d27f3a4cbd4fc19725",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: -1, expected: 0)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 955,
+              "wall_time": 768
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 403,
+              "wall_time": 416
+            }
+          },
+          {
+            "subject": 2,
+            "elapsedMs": 2578.0,
+            "nonce": "d46553a748aca03847e873cab87a25d3",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 11, expected: 10)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 980,
+              "wall_time": 773
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 437,
+              "wall_time": 442
+            }
+          },
+          {
+            "subject": 3,
+            "elapsedMs": 2469.0,
+            "nonce": "b95dd5cad01fa4674d03abdbb4133afa",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 962,
+              "wall_time": 769
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 436,
+              "wall_time": 430
+            }
+          },
+          {
+            "subject": 1,
+            "elapsedMs": 2547.0,
+            "nonce": "003c0440369d393ad69ad8871c67ff73",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: -1, expected: 0)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1037,
+              "wall_time": 786
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 429,
+              "wall_time": 437
+            }
+          },
+          {
+            "subject": 2,
+            "elapsedMs": 2734.0,
+            "nonce": "c533ebd3e3d7eee1305152902ab5bd9e",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 11, expected: 10)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1195,
+              "wall_time": 954
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 480,
+              "wall_time": 477
+            }
+          },
+          {
+            "subject": 3,
+            "elapsedMs": 2516.0,
+            "nonce": "ddec9d7f27ae4b7bf3aafcd16ec18842",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 925,
+              "wall_time": 765
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 432,
+              "wall_time": 441
+            }
+          }
+        ]
+      },
+      {
+        "elapsedMs": 20265.0,
+        "jobs": [
+          {
+            "subject": 0,
+            "elapsedMs": 2375.0,
+            "nonce": "6577db81e8e206e78cfbfd69b8af88a3",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 916,
+              "wall_time": 727
+            },
+            "run": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 401,
+              "wall_time": 414
+            }
+          },
+          {
+            "subject": 0,
+            "elapsedMs": 2593.0,
+            "nonce": "59aaaa6d30ba70ac09f978ac5e03396e",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1081,
+              "wall_time": 831
+            },
+            "run": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 453,
+              "wall_time": 447
+            }
+          },
+          {
+            "subject": 1,
+            "elapsedMs": 2547.0,
+            "nonce": "d069c88a48707ddb4cb3b56d7d74b605",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: -1, expected: 0)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1026,
+              "wall_time": 837
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 466,
+              "wall_time": 457
+            }
+          },
+          {
+            "subject": 2,
+            "elapsedMs": 2485.0,
+            "nonce": "f2eba168f389938b2d00066acde03e4e",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 11, expected: 10)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1033,
+              "wall_time": 779
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 429,
+              "wall_time": 428
+            }
+          },
+          {
+            "subject": 3,
+            "elapsedMs": 2515.0,
+            "nonce": "dac652a0b76341c8312d94578a9b5d00",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1040,
+              "wall_time": 841
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 418,
+              "wall_time": 404
+            }
+          },
+          {
+            "subject": 1,
+            "elapsedMs": 2532.0,
+            "nonce": "7b60a6f263eae843cacd83e05da3488d",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: -1, expected: 0)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1008,
+              "wall_time": 810
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 416,
+              "wall_time": 420
+            }
+          },
+          {
+            "subject": 2,
+            "elapsedMs": 2750.0,
+            "nonce": "776d6213c335f65ad44ecb972a403aa5",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 11, expected: 10)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 1022.9999999999999,
+              "wall_time": 829
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 420,
+              "wall_time": 422
+            }
+          },
+          {
+            "subject": 3,
+            "elapsedMs": 2468.0,
+            "nonce": "a52bf2b9b410813b3103247ea2c620e5",
+            "learnerSha256": "f3deeb982d890c0460942fda11bad0b6a332aee6ea90c60d6e9b4896f6ba275f",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "compile": {
+              "code": 0,
+              "signal": null,
+              "cpu_time": 974,
+              "wall_time": 762
+            },
+            "run": {
+              "code": 1,
+              "signal": null,
+              "cpu_time": 433,
+              "wall_time": 439
+            }
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  "compileOnceFixture": {
+    "fixtureOnly": true,
+    "idle": [
+      {
+        "elapsedMs": 3922.0,
+        "compile": {
+          "signal": null,
+          "stdout": "warning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'AwesomeAssertions' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\nwarning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'xunit.v3.runner.inproc.console' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\n",
+          "stderr": "",
+          "code": 0,
+          "output": "warning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'AwesomeAssertions' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\nwarning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'xunit.v3.runner.inproc.console' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\n",
+          "memory": 81860000,
+          "message": null,
+          "status": null,
+          "cpu_time": 1162,
+          "wall_time": 795
+        },
+        "run": {
+          "signal": null,
+          "stderr": "",
+          "code": 0,
+          "memory": 41724000,
+          "message": null,
+          "status": null,
+          "cpu_time": 3681,
+          "wall_time": 3050
+        },
+        "children": [
+          {
+            "subject": 0,
+            "nonce": "D2CC0FCF6A7FBE2EBCAE4641AB0A5CE2",
+            "pid": 11,
+            "code": 0,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [],
+            "reportSha256": "65bd4fef8b38f99c231b0bc5f3977b9516428758c0198687ec26688e20722cda"
+          },
+          {
+            "subject": 0,
+            "nonce": "EBC089B447AB617954734F552D0B1602",
+            "pid": 33,
+            "code": 0,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [],
+            "reportSha256": "5a6a837b2c40352e0ea7eb4018dbc9b7d40995e9b14cad0598086e1d4a3c3396"
+          },
+          {
+            "subject": 1,
+            "nonce": "6A1BD9A7DB6D89E320B93298EFB4E5BB",
+            "pid": 48,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: -1, expected: 0)"
+            ],
+            "reportSha256": "47d956c12f45eb0b3412f813ea0239f5fddae8e19d52c35d22ee4b211dbcfa60"
+          },
+          {
+            "subject": 2,
+            "nonce": "7914124E687DF668A152116FFB3DCAEA",
+            "pid": 64,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 11, expected: 10)"
+            ],
+            "reportSha256": "61ef86df224f774da7f390d94eb41a392ecd548324d7e0148bbaaf5bdfbb889e"
+          },
+          {
+            "subject": 3,
+            "nonce": "1BBE3C8CA4CE7F98E756FD208DB5B8A9",
+            "pid": 79,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "reportSha256": "d76c6546120da64925ec08e0ace039bbe6ec3e92bdb025e56069761f07d625b8"
+          },
+          {
+            "subject": 1,
+            "nonce": "6CADC8AC78C789FB8134C6521D2A21BA",
+            "pid": 94,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: -1, expected: 0)"
+            ],
+            "reportSha256": "b81c0f0eebe8bc2e445f85e4e215f6cca98d8084ba1305e6204dfdc08b0ddd89"
+          },
+          {
+            "subject": 2,
+            "nonce": "449D8B9F9C6F7C2C11C28422E18BD6B0",
+            "pid": 109,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 11, expected: 10)"
+            ],
+            "reportSha256": "cbf01b6d9211fce536123e6c34527c51e8bc128ba009d8a3d028059d775fcac6"
+          },
+          {
+            "subject": 3,
+            "nonce": "3C5AA0918795238402F19ADA04A5A828",
+            "pid": 124,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "reportSha256": "cd03144e1f38bc079e926943fc72bb7c89125c8799c8ceb99be8b859a948ad3e"
+          }
+        ]
+      },
+      {
+        "elapsedMs": 3797.0,
+        "compile": {
+          "signal": null,
+          "stdout": "warning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'AwesomeAssertions' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\nwarning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'xunit.v3.runner.inproc.console' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\n",
+          "stderr": "",
+          "code": 0,
+          "output": "warning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'AwesomeAssertions' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\nwarning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'xunit.v3.runner.inproc.console' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\n",
+          "memory": 82952000,
+          "message": null,
+          "status": null,
+          "cpu_time": 1134,
+          "wall_time": 765
+        },
+        "run": {
+          "signal": null,
+          "stderr": "",
+          "code": 0,
+          "memory": 41188000,
+          "message": null,
+          "status": null,
+          "cpu_time": 3608,
+          "wall_time": 2990
+        },
+        "children": [
+          {
+            "subject": 0,
+            "nonce": "E23CACC1EF528A27DC625581809549A7",
+            "pid": 11,
+            "code": 0,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [],
+            "reportSha256": "9dfd575c06bfeb464a7ec692a0484ef041ea18a4b51eaa053fec5fc104688c85"
+          },
+          {
+            "subject": 0,
+            "nonce": "B11D7B5024A082244852CF72A58F3160",
+            "pid": 33,
+            "code": 0,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [],
+            "reportSha256": "1945d5b573a358e8d04c27cbcd516f29dfaba9c1fdd164c0e9208ccea43c1c9a"
+          },
+          {
+            "subject": 1,
+            "nonce": "F0AC62E65D9C036D74F2D0D1BCDB3ADB",
+            "pid": 48,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: -1, expected: 0)"
+            ],
+            "reportSha256": "c97eae0cb3363934df00111026dcab1cc0396724ab799ede7578ff3978cc7e91"
+          },
+          {
+            "subject": 2,
+            "nonce": "5CB90F1F023B1B3A6A0AB89F43E0C892",
+            "pid": 63,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 11, expected: 10)"
+            ],
+            "reportSha256": "0bf5aa7bef4ba7d97c88125cd98320c2a8f484f12deb7ccc59e5c8b473a7fb4f"
+          },
+          {
+            "subject": 3,
+            "nonce": "0C1E71340CCA81575ED36FA5B4ADE9F2",
+            "pid": 78,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "reportSha256": "ff57664f7edce424f1aeeff346af11a28fbce1b1832f10d68c8bbe7bf84f7de5"
+          },
+          {
+            "subject": 1,
+            "nonce": "C1C4385F4DEF155FA9F4F3C1B999860F",
+            "pid": 93,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: -1, expected: 0)"
+            ],
+            "reportSha256": "390cf577692470dec8b8fb8bc80fb0fe1b855c28546538694f838b982eba9a9b"
+          },
+          {
+            "subject": 2,
+            "nonce": "DABCB1802DE54FCC368B0C8685034A4B",
+            "pid": 108,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 11, expected: 10)"
+            ],
+            "reportSha256": "993f3f9504a170983ef8b7cb90a0595def1b04b6eea8cb984192c1fac2ed4b3f"
+          },
+          {
+            "subject": 3,
+            "nonce": "AA66B4CAF527D993E8D048FBB8074B48",
+            "pid": 123,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "reportSha256": "bb4c084aa43cd83322db23be427d9341c8c827a06f6051115626583cd2e12448"
+          }
+        ]
+      },
+      {
+        "elapsedMs": 4110.0,
+        "compile": {
+          "signal": null,
+          "stdout": "warning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'AwesomeAssertions' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\nwarning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'xunit.v3.runner.inproc.console' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\n",
+          "stderr": "",
+          "code": 0,
+          "output": "warning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'AwesomeAssertions' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\nwarning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'xunit.v3.runner.inproc.console' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\n",
+          "memory": 83764000,
+          "message": null,
+          "status": null,
+          "cpu_time": 1173,
+          "wall_time": 804
+        },
+        "run": {
+          "signal": null,
+          "stderr": "",
+          "code": 0,
+          "memory": 42148000,
+          "message": null,
+          "status": null,
+          "cpu_time": 3915,
+          "wall_time": 3254
+        },
+        "children": [
+          {
+            "subject": 0,
+            "nonce": "DE32F955C64D6CEAE5DFD1C3E9A173CC",
+            "pid": 11,
+            "code": 0,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [],
+            "reportSha256": "81435a50f8488dab9021e56cc595b76301ad5ae6e30a3a05f58f3ad0c8a0b096"
+          },
+          {
+            "subject": 0,
+            "nonce": "57C1E6C1B53E6C2EB496A15E17B4B463",
+            "pid": 33,
+            "code": 0,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [],
+            "reportSha256": "600002462a3e19a8a86040ac407eccdcc6461fe5e9007f2677a5970344396d11"
+          },
+          {
+            "subject": 1,
+            "nonce": "508297C77FA8F5AA28B46CFB17BA87E3",
+            "pid": 48,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: -1, expected: 0)"
+            ],
+            "reportSha256": "dbc33343bc3377104111aba000d703a006de80948ff422ff234da87e1d0a74f9"
+          },
+          {
+            "subject": 2,
+            "nonce": "8B9F4A5239CCA8F862FA4CCFE0A9FEE4",
+            "pid": 63,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 11, expected: 10)"
+            ],
+            "reportSha256": "c4351c676c71e2b36b03a9a99a6ce938c05dee8c3dc71991e77985c46babd877"
+          },
+          {
+            "subject": 3,
+            "nonce": "F41F77C684A778414AB007B17AD699C5",
+            "pid": 78,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "reportSha256": "4fced77c5eecf9f74dd1821afa6f31688e9b31588e84208d3940b12f4db828bf"
+          },
+          {
+            "subject": 1,
+            "nonce": "7049F4C9F00E2C6506057788B2010865",
+            "pid": 93,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: -1, expected: 0)"
+            ],
+            "reportSha256": "2569413787af6baa8eed70c0b088ce45209e7d865d0860f814c19535298ddf82"
+          },
+          {
+            "subject": 2,
+            "nonce": "E2F7FBD0C802D0612EF2723E2F1ED789",
+            "pid": 108,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 11, expected: 10)"
+            ],
+            "reportSha256": "309ce40cf3f340a16281677ea69dcf9704f1895b16d55d5b1731318bc76c0d0f"
+          },
+          {
+            "subject": 3,
+            "nonce": "5D14719A4BEB55348226F448854E0250",
+            "pid": 123,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "reportSha256": "35b68c1d3a085063aa9d807a7c2562e9bde273b8c5b01f7b2015899d1f4808ed"
+          }
+        ]
+      }
+    ],
+    "concurrentSubmitters": [
+      {
+        "elapsedMs": 3984.0,
+        "compile": {
+          "signal": null,
+          "stdout": "warning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'AwesomeAssertions' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\nwarning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'xunit.v3.runner.inproc.console' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\n",
+          "stderr": "",
+          "code": 0,
+          "output": "warning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'AwesomeAssertions' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\nwarning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'xunit.v3.runner.inproc.console' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\n",
+          "memory": 83932000,
+          "message": null,
+          "status": null,
+          "cpu_time": 1127,
+          "wall_time": 761
+        },
+        "run": {
+          "signal": null,
+          "stderr": "",
+          "code": 0,
+          "memory": 42756000,
+          "message": null,
+          "status": null,
+          "cpu_time": 3881,
+          "wall_time": 3195
+        },
+        "children": [
+          {
+            "subject": 0,
+            "nonce": "14B5533679EAF0761F9D11352F2709AC",
+            "pid": 11,
+            "code": 0,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [],
+            "reportSha256": "330e6f3d5cd8b35dcb58b81cc4104f46eefccb344d3a10dd45bf90349654b2af"
+          },
+          {
+            "subject": 0,
+            "nonce": "C4385C957367E4A8508005C85EE8AC30",
+            "pid": 33,
+            "code": 0,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [],
+            "reportSha256": "aa574e0622c19ac949577a7d9146c91d424cb074734adb5ea9dad7df4f0c7876"
+          },
+          {
+            "subject": 1,
+            "nonce": "36E62B8E3951FE0B96A2B9DA6F1AF4EB",
+            "pid": 48,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: -1, expected: 0)"
+            ],
+            "reportSha256": "342c359632140eb7c29f16466d6011bc691d9c08c5b9bfa05360c9dc3b8158c4"
+          },
+          {
+            "subject": 2,
+            "nonce": "8E516901071B3C2DBF64965CF998E568",
+            "pid": 63,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 11, expected: 10)"
+            ],
+            "reportSha256": "99a6a62b5a3e47c619baca5b77303625de40016d9bd4aaf5a54d92e2d1b04283"
+          },
+          {
+            "subject": 3,
+            "nonce": "40B63E9D8F1E1540C6B00C76015F2FD5",
+            "pid": 78,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "reportSha256": "883b9e89f2a73c005911a76d22d79eb42ebf716c381a3ae76b18c6b77cff1aa5"
+          },
+          {
+            "subject": 1,
+            "nonce": "F4700B6B80C836B46FBFDEAD8D1AEF24",
+            "pid": 93,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: -1, expected: 0)"
+            ],
+            "reportSha256": "bcd8baebd1004dca4e7c58b33bd2236cff6febc17c03d7674b3c9b83befa67e4"
+          },
+          {
+            "subject": 2,
+            "nonce": "69239B8ADB40F4BEF7D2EE2E5287E7C4",
+            "pid": 108,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 11, expected: 10)"
+            ],
+            "reportSha256": "dd9cbc376d2e2dc7a6f1d518d92f9bdf5c4c6bd8993fbeffddd2e2f1ec63f28b"
+          },
+          {
+            "subject": 3,
+            "nonce": "902C4241C784571B9C938490D9A3886F",
+            "pid": 123,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "reportSha256": "6c6512db56bd7c66a1fd95cefa6be715b486e8e4a7d6e9756a4a29309baf2e19"
+          }
+        ]
+      },
+      {
+        "elapsedMs": 8438.0,
+        "compile": {
+          "signal": null,
+          "stdout": "warning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'AwesomeAssertions' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\nwarning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'xunit.v3.runner.inproc.console' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\n",
+          "stderr": "",
+          "code": 0,
+          "output": "warning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'AwesomeAssertions' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\nwarning CS1701: Assuming assembly reference 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' used by 'xunit.v3.runner.inproc.console' matches identity 'System.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' of 'System.Runtime', you may need to supply runtime policy\n",
+          "memory": 81840000,
+          "message": null,
+          "status": null,
+          "cpu_time": 1170,
+          "wall_time": 839
+        },
+        "run": {
+          "signal": null,
+          "stderr": "",
+          "code": 0,
+          "memory": 40772000,
+          "message": null,
+          "status": null,
+          "cpu_time": 4386,
+          "wall_time": 3579
+        },
+        "children": [
+          {
+            "subject": 0,
+            "nonce": "8F4ABA345FBD58DC253A65DD6EE61CD7",
+            "pid": 11,
+            "code": 0,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [],
+            "reportSha256": "b2bb3f5ce6f99bd750968677b1b4a6c75bfbaba30d0b8c5fa3ac2ea4510b2b3e"
+          },
+          {
+            "subject": 0,
+            "nonce": "5AD6303D69932C0A80455BA369CC7401",
+            "pid": 33,
+            "code": 0,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [],
+            "reportSha256": "e7a69654f52b6fc0c0a3a680e66f5d6688787824481941b0e795b8a031bb829c"
+          },
+          {
+            "subject": 1,
+            "nonce": "C38C0D6B812EEBF59A01AD46190F6300",
+            "pid": 48,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: -1, expected: 0)"
+            ],
+            "reportSha256": "89743f3cb4520b3ba029e42e6e3351a8ae6f1406ac5731ddb5f00edcdf6566ad"
+          },
+          {
+            "subject": 2,
+            "nonce": "D84D16017AB9771DA36F9CAEBC6530C8",
+            "pid": 63,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 11, expected: 10)"
+            ],
+            "reportSha256": "12e66c0885baed37822e6ca01bb6ade136ebcaea4d4bdbc76c45eb78b2030298"
+          },
+          {
+            "subject": 3,
+            "nonce": "5980915F3BAC3CD307C238E9C904E47D",
+            "pid": 78,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "reportSha256": "1860a2a0c92ec194703924f009f0bd1c2648c0719febedfbec15fd19bec10783"
+          },
+          {
+            "subject": 1,
+            "nonce": "DEDE12D2BEC16A975ED93542176FEB70",
+            "pid": 94,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: -1, expected: 0)"
+            ],
+            "reportSha256": "5eddcffe0806e00c5ccddfe2e932592695d7f663fd2c13e028f8141901cfb353"
+          },
+          {
+            "subject": 2,
+            "nonce": "DCB44E16542D7861E599F6AD3151379F",
+            "pid": 109,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 11, expected: 10)"
+            ],
+            "reportSha256": "0afd2eb95e798f53b1d5e51eb63d69167f1a57b33fbc13aa4aef7f25939db78b"
+          },
+          {
+            "subject": 3,
+            "nonce": "57D63A6B070D8F335D3FC557DB7D62DE",
+            "pid": 124,
+            "code": 1,
+            "stderr": "",
+            "inventory": [
+              "ClampTests.Clamps(value: -1, expected: 0)",
+              "ClampTests.Clamps(value: 11, expected: 10)",
+              "ClampTests.Clamps(value: 5, expected: 5)",
+              "FreshChildTests.HasFreshStaticsAndDirectory"
+            ],
+            "failed": [
+              "ClampTests.Clamps(value: 5, expected: 5)"
+            ],
+            "reportSha256": "29f1b19579d4e67df817ee57d50af5767e55fe974448dee84ced15706bd4b715"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  "httpDisconnect": {
+    "isolatePid": 3,
+    "containerPid": 5267,
+    "aliveAfterDisconnect": true,
+    "followingRequestElapsedMs": 3375.0,
+    "disconnectToQuiescentMs": 3703.0,
+    "following": {
+      "compile": {
+        "signal": null,
+        "stdout": "",
+        "stderr": "",
+        "code": 0,
+        "output": "",
+        "memory": 50252000,
+        "message": null,
+        "status": null,
+        "cpu_time": 637,
+        "wall_time": 634
+      },
+      "run": {
+        "signal": null,
+        "stdout": "following\n",
+        "stderr": "",
+        "code": 0,
+        "output": "following\n",
+        "memory": 6620000,
+        "message": null,
+        "status": null,
+        "cpu_time": 31,
+        "wall_time": 63
+      },
+      "language": "csharp.net",
+      "version": "10.0.401"
+    }
+  }
+}

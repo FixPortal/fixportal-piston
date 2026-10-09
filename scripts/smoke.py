@@ -8,6 +8,7 @@ check, printing every result so a red run says which property broke.
 
 import json
 import os
+from pathlib import Path
 import shutil
 import subprocess
 import sys
@@ -18,6 +19,7 @@ import urllib.request
 BASE = sys.argv[1] if len(sys.argv) > 1 else "http://127.0.0.1:2000"
 CSHARP = ("csharp", "10.0.401")
 CSHARP_EF = ("csharp-ef", "10.0.401")
+CSHARP_TESTS = ("csharp-tests", "10.0.401")
 PYTHON = ("python", "3.13.16")
 # Builds a model only. Host=/nonexistent is never opened.
 EF_PROGRAM = (
@@ -135,6 +137,24 @@ def wait_for_api(deadline_seconds=60):
 
 CHECKS = [
     (
+        "plain C# cannot reference xUnit",
+        CSHARP,
+        "Console.WriteLine(typeof(Xunit.FactAttribute));\n",
+        lambda r: r["compile"]["code"] != 0 and "CS0246" in r["compile"]["output"],
+    ),
+    (
+        "C# EF cannot reference xUnit",
+        CSHARP_EF,
+        "Console.WriteLine(typeof(Xunit.FactAttribute));\n",
+        lambda r: r["compile"]["code"] != 0 and "CS0246" in r["compile"]["output"],
+    ),
+    (
+        "C# tests cannot reference EF Core",
+        CSHARP_TESTS,
+        "using Microsoft.EntityFrameworkCore; public class C { DbContext? db; }\n",
+        lambda r: r["compile"]["code"] != 0 and "EntityFrameworkCore" in r["compile"]["output"],
+    ),
+    (
         "C# compiles and runs current language features",
         CSHARP,
         "int[] values = [1, 2, 3];\n"
@@ -212,6 +232,7 @@ def main():
     expected = {
         ("csharp.net", CSHARP[1]),
         ("csharp-ef", CSHARP_EF[1]),
+        CSHARP_TESTS,
         ("python", PYTHON[1]),
     }
     failed = 0
@@ -249,7 +270,10 @@ def main():
     if not ok:
         print(detail)
 
-    total = len(CHECKS) + 3 + cleanup_total
+    tests_smoke = subprocess.run([sys.executable, str(Path(__file__).with_name("smoke-tests.py")), BASE])
+    failed += tests_smoke.returncode != 0
+
+    total = len(CHECKS) + 4 + cleanup_total
     print(f"{total - failed}/{total} checks passed")
     sys.exit(1 if failed else 0)
 

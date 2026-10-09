@@ -6,4 +6,6 @@
 !api/src
 !scripts/install-package.sh
 !packages/dotnet/10.0.401
+packages/dotnet/10.0.401/tests-package/bin
+packages/dotnet/10.0.401/tests-package/obj
 !packages/python/3.13.16
