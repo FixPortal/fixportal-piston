@@ -46,8 +46,8 @@ On the dedicated candidate with concurrency exactly one:
 | --- | --- |
 | Independent jobs, idle | 10782, 10094, 10219 |
 | Independent jobs, two concurrent submitters | 19031, 20265 |
-| Compile once, eight fresh children, idle | 3922, 3797, 4110 |
-| Compile once, two concurrent submitters | 3984, 8438 |
+| Compile once, eight fresh children, one submitter | 7235, 5516, 5078 |
+| Compile once, two concurrent submitters | 6594, 12922 |
 
 Independent compilation misses the proposed 15-second target under actual
 concurrent submissions. The approved fallback is feasible on this host: one
@@ -59,8 +59,15 @@ are gone after the response.
 
 `scripts/measure-tests-once.py` is explicitly a developer fixture, not the
 product grader. Each child has a three-second wall watchdog, a three-second CPU
-limit and a bounded output reader, with kill and wait on every exit path. The
-aggregate sandbox has a 26-second wall/CPU ceiling and the runtime's 256 MiB
+limit and a bounded output reader, with kill and wait on every exit path.
+The watchdog covers process exit and completion of both output readers. A child
+that leaves inherited pipes open therefore aborts the fixture, instead of being
+accepted after its own process exits. The fixture does not establish independent
+process-group cleanup of orphaned descendants; isolate cleans the whole box
+before returning. The inherited-pipe fixture now fails with a timeout, emits no
+combined results line and leaves the runner quiescent. Independent process-group
+cleanup of orphaned descendants remains a production gate.
+The aggregate sandbox has a 26-second wall/CPU ceiling and the runtime's 256 MiB
 memory cap. Its disposable container overrides that ceiling; this PR does not
 widen ordinary runtime defaults. The parent copies the compiled app into each
 fresh directory because xUnit changes its working directory to the assembly's
@@ -88,8 +95,10 @@ that larger ceiling must be accounted for before production activation.
 The separate lifecycle-recovery proposal remains unimplemented here.
 
 Decision 5's 60-second portal deadline remains a proposal for Chris to confirm.
-The measured fallback is comfortably below 15 seconds for this fixture and
-two submitters, but these five schedules are feasibility evidence, not a p95
+The measured fallback is below 15 seconds for this fixture and two submitters.
+The final rerun overlapped local backend/web validation on the same host;
+the earlier quiet-host fixture measured 3.8–4.1 seconds alone and 4.0/8.4 seconds
+with two submitters. These five final schedules are feasibility evidence, not a p95
 or capacity guarantee. More production-representative schedules belong to the
 completed grader's release gate.
 
